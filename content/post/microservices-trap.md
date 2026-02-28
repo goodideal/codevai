@@ -5,7 +5,7 @@ categories:
     - Tech
 tags:
     - 架构踩坑
-draft: true
+draft: false
 ---
 
 最近老项目重构，看到当年为了追时髦强行拆的微服务，实在没忍住吐槽。业务没多大，服务拆了十几个，联调成本直接飙升。
