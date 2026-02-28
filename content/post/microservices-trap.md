@@ -1,10 +1,12 @@
 ---
-title: "测试：聊聊微服务拆分太早的坑"
+title: "聊聊微服务拆分太早的坑"
 date: 2026-02-28T18:00:00+08:00
+slug: "microservices-trap"
 categories:
     - Tech
 tags:
-    - 架构踩坑
+    - 架构
+    - 踩坑
 draft: false
 ---
 
