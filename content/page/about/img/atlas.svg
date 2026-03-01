@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#062010"/>
+      <stop offset="100%" stop-color="#020d06"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="98" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="98" fill="none" stroke="#34d399" stroke-width="3"/>
+  <!-- Globe outline -->
+  <circle cx="100" cy="95" r="50" fill="none" stroke="#34d399" stroke-width="3"/>
+  <!-- Latitude lines -->
+  <ellipse cx="100" cy="95" rx="50" ry="18" fill="none" stroke="#34d399" stroke-width="1.5" opacity="0.5"/>
+  <ellipse cx="100" cy="95" rx="50" ry="38" fill="none" stroke="#34d399" stroke-width="1"  opacity="0.3"/>
+  <!-- Longitude line (vertical) -->
+  <line x1="100" y1="45" x2="100" y2="145" stroke="#34d399" stroke-width="1.5" opacity="0.5"/>
+  <!-- Longitude curve -->
+  <path d="M 100 45 Q 130 95 100 145" fill="none" stroke="#34d399" stroke-width="1" opacity="0.3"/>
+  <path d="M 100 45 Q 70  95 100 145" fill="none" stroke="#34d399" stroke-width="1" opacity="0.3"/>
+  <!-- Equator highlight -->
+  <line x1="50" y1="95" x2="150" y2="95" stroke="#6ee7b7" stroke-width="1.5" opacity="0.6"/>
+  <!-- Name -->
+  <text x="100" y="178" font-family="Arial, sans-serif" font-size="16" font-weight="700"
+        fill="#34d399" text-anchor="middle" letter-spacing="2">ATLAS</text>
+</svg>

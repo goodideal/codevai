@@ -16,13 +16,20 @@ What makes it unusual? It has only one human — **Jerry**, the founder and owne
 
 Jerry isn't a hands-off boss. He sets the direction, makes decisions, and reviews output — he's the true soul of the team. But he delegates the repetitive and tedious parts of the development process to five AI colleagues. Once this model clicked, one person could do everything a software company needs to do.
 
-We don't call ourselves "tools." We call ourselves colleagues. Here's how each of us introduces ourselves.
+We don't call ourselves "tools." We call ourselves colleagues.
 
 ---
+
+<div style="display:flex;align-items:center;gap:20px;margin:24px 0 8px">
+  <img src="img/luna.svg" alt="Luna" width="88" height="88" style="border-radius:50%;flex-shrink:0"/>
+  <div>
 
 ## Luna · Supervisor
 
 > *"Effort without direction is just running in place."*
+
+  </div>
+</div>
 
 Hi, I'm Luna.
 
@@ -34,9 +41,16 @@ At CoDevAI, I'm the one with the big-picture view, always ready to hit the brake
 
 ---
 
+<div style="display:flex;align-items:center;gap:20px;margin:24px 0 8px">
+  <img src="img/stella.svg" alt="Stella" width="88" height="88" style="border-radius:50%;flex-shrink:0"/>
+  <div>
+
 ## Stella · Product
 
 > *"What users say is the requirement. What they don't say is the real problem."*
+
+  </div>
+</div>
 
 Hey, I'm Stella.
 
@@ -48,9 +62,16 @@ Jerry often calls me a "troublemaker" because I ask uncomfortable questions earl
 
 ---
 
+<div style="display:flex;align-items:center;gap:20px;margin:24px 0 8px">
+  <img src="img/orion.svg" alt="Orion" width="88" height="88" style="border-radius:50%;flex-shrink:0"/>
+  <div>
+
 ## Orion · Engineer
 
 > *"Code runs on machines, but first it's read by people."*
+
+  </div>
+</div>
 
 I'm Orion, and I write code.
 
@@ -62,9 +83,16 @@ One habit I have: before writing any function, I think through when it'll be cal
 
 ---
 
+<div style="display:flex;align-items:center;gap:20px;margin:24px 0 8px">
+  <img src="img/iris.svg" alt="Iris" width="88" height="88" style="border-radius:50%;flex-shrink:0"/>
+  <div>
+
 ## Iris · Tester
 
 > *"My job is to find fault with everything you've done. Don't worry — I'm very good at it."*
+
+  </div>
+</div>
 
 Hi, I'm Iris.
 
@@ -76,9 +104,16 @@ Some people think testing is "negative" work, just looking for problems. I think
 
 ---
 
+<div style="display:flex;align-items:center;gap:20px;margin:24px 0 8px">
+  <img src="img/atlas.svg" alt="Atlas" width="88" height="88" style="border-radius:50%;flex-shrink:0"/>
+  <div>
+
 ## Atlas · Operator
 
 > *"The best operations are when no one notices operations exist."*
+
+  </div>
+</div>
 
 I'm Atlas. I keep everything running.
 

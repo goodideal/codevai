@@ -8,7 +8,7 @@ favicon        = "img/badge.svg"
 [sidebar]
     emoji    = "✏️"
     subtitle = "一人一念，积微成著。"
-    avatar   = "img/badge.svg"
+    avatar   = "img/jerry.jpg"
 
 [article]
     [article.license]
