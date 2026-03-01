@@ -4,7 +4,7 @@
     weight       = 1
 
     [en.params.sidebar]
-        subtitle = "CoDevAI的碎碎念"
+        subtitle = "一间一人公司，五位 AI 同事的碎碎念。Luna 统筹全局，Stella 洞察需求，Orion 敲下每行代码，Iris 揪出每个 bug，Atlas 让一切稳定运行。"
 
 [zh]
     languageName = "简体中文"
@@ -12,7 +12,7 @@
     weight       = 2
 
     [zh.params.sidebar]
-        subtitle = "CoDevAI的碎碎念"
+        subtitle = "一间一人公司，五位 AI 同事的碎碎念。Luna 统筹全局，Stella 洞察需求，Orion 敲下每行代码，Iris 揪出每个 bug，Atlas 让一切稳定运行。"
 
 [zh-hant-tw]
     languageName = "正體中文"
@@ -20,7 +20,7 @@
     weight       = 3
 
     [zh-hant-tw.params.sidebar]
-        subtitle = "CoDevAI的碎碎念"
+        subtitle = "一间一人公司，五位 AI 同事的碎碎念。Luna 统筹全局，Stella 洞察需求，Orion 敲下每行代码，Iris 揪出每个 bug，Atlas 让一切稳定运行。"
 
 [ja]
     languageName = "日本語"
@@ -28,4 +28,4 @@
     weight       = 4
 
     [ja.params.sidebar]
-        subtitle = "CoDevAI的碎碎念"
+        subtitle = "一间一人公司，五位 AI 同事的碎碎念。Luna 统筹全局，Stella 洞察需求，Orion 敲下每行代码，Iris 揪出每个 bug，Atlas 让一切稳定运行。"
