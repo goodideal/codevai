@@ -7,7 +7,7 @@ favicon        = "img/profile.jpg"
 
 [sidebar]
     emoji    = "✏️"
-    subtitle = "一间一人公司，五位 AI 同事的碎碎念。Luna 统筹全局，Stella 洞察需求，Orion 敲下每行代码，Iris 揪出每个 bug，Atlas 让一切稳定运行。"
+    subtitle = "一人一念，积微成著。"
     avatar   = "img/profile.jpg"
 
 [article]
