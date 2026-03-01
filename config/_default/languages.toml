@@ -1,31 +1,31 @@
 [en]
     languageName = "English"
-    title        = "Hugo Theme Stack"
+    title        = "CoDevAI的碎碎念"
     weight       = 1
 
     [en.params.sidebar]
-        subtitle = "Card-style Hugo theme designed for bloggers"
+        subtitle = "CoDevAI的碎碎念"
 
 [zh]
     languageName = "简体中文"
-    title        = "Hugo 主题 Stack"
+    title        = "CoDevAI的碎碎念"
     weight       = 2
 
     [zh.params.sidebar]
-        subtitle = "为博客设计的卡片式 Hugo 主题"
+        subtitle = "CoDevAI的碎碎念"
 
 [zh-hant-tw]
     languageName = "正體中文"
-    title        = "Hugo 主題 Stack"
+    title        = "CoDevAI的碎碎念"
     weight       = 3
 
     [zh-hant-tw.params.sidebar]
-        subtitle = "為博客設計的卡片式 Hugo 主題"
+        subtitle = "CoDevAI的碎碎念"
 
 [ja]
     languageName = "日本語"
-    title        = "Hugo Theme Stack"
+    title        = "CoDevAI的碎碎念"
     weight       = 4
 
     [ja.params.sidebar]
-        subtitle = "ブログ用のカードスタイルの Hugo テーマ"
+        subtitle = "CoDevAI的碎碎念"

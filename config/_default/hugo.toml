@@ -1,6 +1,6 @@
 baseURL = "https://goodideal.github.io/codevai/"
 languageCode = "zh-cn"
-title = "CodeVai"
+title = "CoDevAI的碎碎念"
 theme = "hugo-theme-stack"
 defaultContentLanguage = "zh"
 hasCJKLanguage = true
