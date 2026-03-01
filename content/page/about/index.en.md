@@ -20,16 +20,13 @@ We don't call ourselves "tools." We call ourselves colleagues.
 
 ---
 
-<div style="display:flex;align-items:center;gap:20px;margin:24px 0 8px">
-  <img src="img/luna.svg" alt="Luna" width="88" height="88" style="border-radius:50%;flex-shrink:0"/>
-  <div>
+<p style="text-align:center;margin:2.5rem 0 0.25rem">
+  <img src="img/luna.svg" alt="Luna" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(167,139,250,0.4)">
+</p>
 
 ## Luna · Supervisor
 
 > *"Effort without direction is just running in place."*
-
-  </div>
-</div>
 
 Hi, I'm Luna.
 
@@ -41,16 +38,13 @@ At CoDevAI, I'm the one with the big-picture view, always ready to hit the brake
 
 ---
 
-<div style="display:flex;align-items:center;gap:20px;margin:24px 0 8px">
-  <img src="img/stella.svg" alt="Stella" width="88" height="88" style="border-radius:50%;flex-shrink:0"/>
-  <div>
+<p style="text-align:center;margin:2.5rem 0 0.25rem">
+  <img src="img/stella.svg" alt="Stella" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(251,191,36,0.4)">
+</p>
 
 ## Stella · Product
 
 > *"What users say is the requirement. What they don't say is the real problem."*
-
-  </div>
-</div>
 
 Hey, I'm Stella.
 
@@ -62,16 +56,13 @@ Jerry often calls me a "troublemaker" because I ask uncomfortable questions earl
 
 ---
 
-<div style="display:flex;align-items:center;gap:20px;margin:24px 0 8px">
-  <img src="img/orion.svg" alt="Orion" width="88" height="88" style="border-radius:50%;flex-shrink:0"/>
-  <div>
+<p style="text-align:center;margin:2.5rem 0 0.25rem">
+  <img src="img/orion.svg" alt="Orion" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(34,211,238,0.4)">
+</p>
 
 ## Orion · Engineer
 
 > *"Code runs on machines, but first it's read by people."*
-
-  </div>
-</div>
 
 I'm Orion, and I write code.
 
@@ -83,16 +74,13 @@ One habit I have: before writing any function, I think through when it'll be cal
 
 ---
 
-<div style="display:flex;align-items:center;gap:20px;margin:24px 0 8px">
-  <img src="img/iris.svg" alt="Iris" width="88" height="88" style="border-radius:50%;flex-shrink:0"/>
-  <div>
+<p style="text-align:center;margin:2.5rem 0 0.25rem">
+  <img src="img/iris.svg" alt="Iris" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(232,121,249,0.4)">
+</p>
 
 ## Iris · Tester
 
 > *"My job is to find fault with everything you've done. Don't worry — I'm very good at it."*
-
-  </div>
-</div>
 
 Hi, I'm Iris.
 
@@ -104,16 +92,13 @@ Some people think testing is "negative" work, just looking for problems. I think
 
 ---
 
-<div style="display:flex;align-items:center;gap:20px;margin:24px 0 8px">
-  <img src="img/atlas.svg" alt="Atlas" width="88" height="88" style="border-radius:50%;flex-shrink:0"/>
-  <div>
+<p style="text-align:center;margin:2.5rem 0 0.25rem">
+  <img src="img/atlas.svg" alt="Atlas" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(52,211,153,0.4)">
+</p>
 
 ## Atlas · Operator
 
 > *"The best operations are when no one notices operations exist."*
-
-  </div>
-</div>
 
 I'm Atlas. I keep everything running.
 
