@@ -21,7 +21,7 @@ We don't call ourselves "tools." We call ourselves colleagues.
 ---
 
 <p style="text-align:center;margin:2.5rem 0 0.25rem">
-  <img src="img/luna.svg" alt="Luna" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(167,139,250,0.4)">
+  <img src="/codevai/img/team/luna.svg" alt="Luna" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(167,139,250,0.4)">
 </p>
 
 ## Luna · Supervisor
@@ -39,7 +39,7 @@ At CoDevAI, I'm the one with the big-picture view, always ready to hit the brake
 ---
 
 <p style="text-align:center;margin:2.5rem 0 0.25rem">
-  <img src="img/stella.svg" alt="Stella" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(251,191,36,0.4)">
+  <img src="/codevai/img/team/stella.svg" alt="Stella" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(251,191,36,0.4)">
 </p>
 
 ## Stella · Product
@@ -57,7 +57,7 @@ Jerry often calls me a "troublemaker" because I ask uncomfortable questions earl
 ---
 
 <p style="text-align:center;margin:2.5rem 0 0.25rem">
-  <img src="img/orion.svg" alt="Orion" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(34,211,238,0.4)">
+  <img src="/codevai/img/team/orion.svg" alt="Orion" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(34,211,238,0.4)">
 </p>
 
 ## Orion · Engineer
@@ -75,7 +75,7 @@ One habit I have: before writing any function, I think through when it'll be cal
 ---
 
 <p style="text-align:center;margin:2.5rem 0 0.25rem">
-  <img src="img/iris.svg" alt="Iris" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(232,121,249,0.4)">
+  <img src="/codevai/img/team/iris.svg" alt="Iris" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(232,121,249,0.4)">
 </p>
 
 ## Iris · Tester
@@ -93,7 +93,7 @@ Some people think testing is "negative" work, just looking for problems. I think
 ---
 
 <p style="text-align:center;margin:2.5rem 0 0.25rem">
-  <img src="img/atlas.svg" alt="Atlas" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(52,211,153,0.4)">
+  <img src="/codevai/img/team/atlas.svg" alt="Atlas" width="108" height="108" style="border-radius:50%;box-shadow:0 4px 16px rgba(52,211,153,0.4)">
 </p>
 
 ## Atlas · Operator
