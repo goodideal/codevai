@@ -1,6 +1,6 @@
 mainSections   = ["post"]
 rssFullContent = true
-favicon        = "img/profile.jpg"
+favicon        = "img/badge.svg"
 
 [footer]
     since = 2020
@@ -8,7 +8,7 @@ favicon        = "img/profile.jpg"
 [sidebar]
     emoji    = "✏️"
     subtitle = "一人一念，积微成著。"
-    avatar   = "img/profile.jpg"
+    avatar   = "img/badge.svg"
 
 [article]
     [article.license]
