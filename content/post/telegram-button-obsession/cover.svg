@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#0a0812"/>
+      <stop offset="100%" stop-color="#050308"/>
+    </radialGradient>
+    <linearGradient id="vs-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1e0a3c" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="textglow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="chaos-blur">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="left-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a0408"/>
+      <stop offset="100%" stop-color="#0f0208"/>
+    </linearGradient>
+    <linearGradient id="right-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#030c06"/>
+      <stop offset="100%" stop-color="#041208"/>
+    </linearGradient>
+    <linearGradient id="center-fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a0408" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#0a0812" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#030c06" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#041208" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Left panel tint (chaos - red) -->
+  <rect x="0" y="0" width="540" height="630" fill="url(#left-grad)"/>
+
+  <!-- Right panel tint (clean - green) -->
+  <rect x="660" y="0" width="540" height="630" fill="url(#right-grad)"/>
+
+  <!-- Center gradient blend -->
+  <rect x="460" y="0" width="280" height="630" fill="url(#center-fade)"/>
+
+  <!-- =====================
+       LEFT SIDE: CHAOS
+       ===================== -->
+
+  <!-- Left title label -->
+  <text x="270" y="80" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="11" fill="#ef4444" letter-spacing="3" opacity="0.7">CHAOS MODE</text>
+
+  <!-- Blurry input box mockup #1 (tilted slightly) -->
+  <g transform="rotate(-1, 270, 200)" filter="url(#chaos-blur)">
+    <rect x="80" y="140" width="360" height="46" rx="8"
+          fill="#160608" stroke="#dc2626" stroke-width="2" opacity="0.85"/>
+    <text x="104" y="170" font-family="'Courier New', monospace"
+          font-size="14" fill="#fca5a5">请输入 yes 确认：</text>
+    <text x="310" y="170" font-family="'Courier New', monospace"
+          font-size="14" fill="#ef4444" font-weight="bold">yse|</text>
+  </g>
+
+  <!-- Error badge #1 -->
+  <rect x="90" y="200" width="160" height="26" rx="5"
+        fill="#7f1d1d" opacity="0.9"/>
+  <text x="170" y="217" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="#fca5a5">⚠ 输入错误</text>
+
+  <!-- Input box #2 (more tilted) -->
+  <g transform="rotate(1.5, 270, 270)" filter="url(#chaos-blur)">
+    <rect x="80" y="242" width="360" height="46" rx="8"
+          fill="#160608" stroke="#dc2626" stroke-width="2" opacity="0.75"/>
+    <text x="104" y="272" font-family="'Courier New', monospace"
+          font-size="14" fill="#fca5a5">请输入 yes 确认：</text>
+    <text x="310" y="272" font-family="'Courier New', monospace"
+          font-size="14" fill="#b91c1c" font-weight="bold">YES|</text>
+  </g>
+
+  <!-- Error badge #2 -->
+  <rect x="260" y="302" width="180" height="26" rx="5"
+        fill="#7f1d1d" opacity="0.85"/>
+  <text x="350" y="319" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="#fca5a5">⚠ 请输入小写 yes</text>
+
+  <!-- Input box #3 (rage mode, red) -->
+  <g filter="url(#chaos-blur)">
+    <rect x="80" y="342" width="360" height="46" rx="8"
+          fill="#200404" stroke="#ef4444" stroke-width="2.5" opacity="0.9"/>
+    <text x="104" y="372" font-family="'Courier New', monospace"
+          font-size="14" fill="#fca5a5">请输入 yes 确认：</text>
+    <text x="310" y="372" font-family="'Courier New', monospace"
+          font-size="16" fill="#dc2626" font-weight="bold">fuck|</text>
+  </g>
+
+  <!-- Large error text -->
+  <text x="270" y="430" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="28" font-weight="800" fill="#dc2626" opacity="0.15">ERROR</text>
+
+  <!-- Facepalm emoji -->
+  <text x="100" y="490" font-size="32" opacity="0.7">🤦</text>
+  <text x="148" y="494" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="13" fill="#7f1d1d" opacity="0.8">三次失败  ·  三分钟  ·  放弃</text>
+
+  <!-- =====================
+       RIGHT SIDE: CLEAN
+       ===================== -->
+
+  <!-- Right title label -->
+  <text x="930" y="80" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="11" fill="#10b981" letter-spacing="3" opacity="0.7">BUTTON MODE</text>
+
+  <!-- Clean message box -->
+  <rect x="760" y="140" width="340" height="56" rx="10"
+        fill="#041a0e" stroke="#059669" stroke-width="1.5"/>
+  <text x="930" y="168" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="14" fill="#94a3b8">⚠️ 确认删除 47GB 数据？</text>
+  <text x="930" y="186" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="#475569">此操作将删除 server_001 全部数据</text>
+
+  <!-- Clean button row -->
+  <rect x="760" y="210" width="340" height="50" rx="10"
+        fill="#030e08" stroke="#0d3b28" stroke-width="1"/>
+  <!-- Confirm button -->
+  <rect x="780" y="222" width="130" height="28" rx="7" fill="#dc2626"/>
+  <text x="845" y="240" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="12" fill="white" font-weight="700">确认删除</text>
+  <!-- Cancel button -->
+  <rect x="924" y="222" width="80" height="28" rx="7"
+        fill="#1e2640" stroke="#374151" stroke-width="1"/>
+  <text x="964" y="240" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="12" fill="#9ca3af">取消</text>
+
+  <!-- Arrow down to step 2 -->
+  <line x1="930" y1="262" x2="930" y2="298" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="930,306 924,292 936,292" fill="#059669" opacity="0.7"/>
+
+  <!-- Step 2: Second confirmation -->
+  <rect x="760" y="310" width="340" height="60" rx="10"
+        fill="#04140a" stroke="#047857" stroke-width="1.5"/>
+  <text x="780" y="332" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="12" fill="#6ee7b7">🔐 二次确认</text>
+  <rect x="780" y="342" width="150" height="22" rx="5" fill="#7f1d1d"/>
+  <text x="855" y="357" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="white" font-weight="600">确认删除 server_001</text>
+  <rect x="942" y="342" width="50" height="22" rx="5"
+        fill="#1e2640" stroke="#374151" stroke-width="1"/>
+  <text x="967" y="357" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="#9ca3af">取消</text>
+
+  <!-- Arrow down to success -->
+  <line x1="930" y1="372" x2="930" y2="406" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="930,414 924,400 936,400" fill="#10b981" opacity="0.7"/>
+
+  <!-- Success state -->
+  <rect x="760" y="418" width="340" height="50" rx="10"
+        fill="#030e08" stroke="#10b981" stroke-width="1.5"/>
+  <text x="930" y="440" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="14" font-weight="700" fill="#10b981">✅ 执行成功</text>
+  <!-- Undo button -->
+  <rect x="820" y="448" width="130" height="14" rx="5"
+        fill="#1d4ed8" opacity="0.6"/>
+  <text x="885" y="459" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="9" fill="#93c5fd">⏪ 撤销（29秒内）</text>
+
+  <!-- Stats under right panel -->
+  <text x="930" y="498" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="32" font-weight="800" fill="#10b981" opacity="0.2">0%</text>
+  <text x="930" y="498" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="13" fill="#065f46">错误率归零 · 一键搞定 · 可撤回</text>
+
+  <!-- =====================
+       CENTER: VS
+       ===================== -->
+  <rect x="566" y="0" width="68" height="630" fill="url(#vs-grad)" opacity="0.3"/>
+  <line x1="600" y1="80" x2="600" y2="550" stroke="#2d1b4e" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- VS badge -->
+  <rect x="568" y="275" width="64" height="80" rx="32" fill="#0d0a1a" stroke="#3b1a6e" stroke-width="1.5"/>
+  <text x="600" y="322" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="22" font-weight="900" fill="#4c1d95">VS</text>
+
+  <!-- =====================
+       TOP TITLE
+       ===================== -->
+  <text x="600" y="44" text-anchor="middle"
+        font-family="'Helvetica Neue', 'Inter', Arial, sans-serif"
+        font-size="26" font-weight="800" fill="#f0ebff" filter="url(#textglow)">
+    灵活是留给创造的，确定是留给操作的
+  </text>
+  <text x="600" y="63" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="#4c1d95" letter-spacing="3" opacity="0.8">
+    Flexibility Is for Creativity · Certainty Is for Execution
+  </text>
+
+  <!-- Bottom tagline -->
+  <text x="600" y="596" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="12" fill="#2d1b4e" letter-spacing="3" opacity="0.7">
+    灵活是留给创造性的，确认是留给确定性的。
+  </text>
+</svg>

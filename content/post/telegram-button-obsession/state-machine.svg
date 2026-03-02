@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a0c14"/>
+      <stop offset="100%" stop-color="#05060c"/>
+    </radialGradient>
+    <marker id="arr-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arr-gray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#374151"/>
+    </marker>
+    <marker id="arr-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="480" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="500" y="32" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="17" font-weight="700" fill="#f0ebff" letter-spacing="1">二次确认状态机</text>
+  <text x="500" y="50" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="#4b5563" letter-spacing="2">关键操作的防误触流程</text>
+
+  <!-- =====================
+       State boxes (centered, horizontal)
+       Step 1: x=100 center  →  Step 2: x=400 center  →  Step 3: x=700 center
+       ===================== -->
+
+  <!-- === STEP 1: Initial delete button === -->
+  <rect x="40" y="100" width="230" height="130" rx="10"
+        fill="#120408" stroke="#7f1d1d" stroke-width="1.5"/>
+  <!-- Header -->
+  <rect x="40" y="100" width="230" height="30" rx="10" fill="#1c0606"/>
+  <rect x="40" y="118" width="230" height="12" fill="#1c0606"/>
+  <text x="155" y="120" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="10" fill="#ef4444" letter-spacing="1">STEP 1</text>
+
+  <text x="155" y="154" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#fca5a5" font-weight="600">触发操作</text>
+
+  <!-- Delete button mockup -->
+  <rect x="75" y="164" width="110" height="28" rx="6" fill="#991b1b"/>
+  <text x="130" y="183" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="12" fill="white" font-weight="600">🗑️ 删除数据</text>
+
+  <text x="155" y="222" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="9" fill="#6b7280">用户点击删除按钮</text>
+
+  <!-- === STEP 2: Warning confirmation === -->
+  <rect x="380" y="100" width="230" height="130" rx="10"
+        fill="#0c0a04" stroke="#92400e" stroke-width="1.5"/>
+  <!-- Header -->
+  <rect x="380" y="100" width="230" height="30" rx="10" fill="#1a1006"/>
+  <rect x="380" y="118" width="230" height="12" fill="#1a1006"/>
+  <text x="495" y="120" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="10" fill="#f59e0b" letter-spacing="1">STEP 2</text>
+
+  <text x="495" y="148" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#fbbf24">⚠️ 警告确认</text>
+
+  <text x="495" y="164" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#9ca3af">这将删除 47GB 数据</text>
+
+  <!-- Confirm button mockup -->
+  <rect x="400" y="172" width="120" height="24" rx="5" fill="#b45309"/>
+  <text x="460" y="188" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="white" font-weight="600">确认删除 server_001</text>
+
+  <!-- Cancel button mockup (small) -->
+  <rect x="534" y="172" width="56" height="24" rx="5" fill="#1e2640" stroke="#374151" stroke-width="1"/>
+  <text x="562" y="188" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="#9ca3af">取消</text>
+
+  <text x="495" y="222" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="9" fill="#6b7280">显示操作后果详情</text>
+
+  <!-- === STEP 3: Success + undo window === -->
+  <rect x="720" y="100" width="230" height="130" rx="10"
+        fill="#030e0a" stroke="#065f46" stroke-width="1.5"/>
+  <!-- Header -->
+  <rect x="720" y="100" width="230" height="30" rx="10" fill="#041a0e"/>
+  <rect x="720" y="118" width="230" height="12" fill="#041a0e"/>
+  <text x="835" y="120" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="10" fill="#10b981" letter-spacing="1">STEP 3</text>
+
+  <text x="835" y="150" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#6ee7b7" font-weight="600">✅ 执行成功</text>
+
+  <text x="835" y="166" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#6b7280">ID: del_a3f9d2_1740841200</text>
+
+  <!-- Undo button -->
+  <rect x="740" y="174" width="110" height="24" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="795" y="190" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="#60a5fa">⏪ 撤销（30秒内）</text>
+
+  <text x="835" y="222" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="9" fill="#6b7280">操作完成，可撤回</text>
+
+  <!-- =====================
+       ARROWS: main flow (blue)
+       ===================== -->
+
+  <!-- Step 1 → Step 2 (confirm path) -->
+  <line x1="270" y1="165" x2="378" y2="165"
+        stroke="#3b82f6" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <text x="324" y="158" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#3b82f6">点击</text>
+
+  <!-- Step 2 → Step 3 (confirm path) -->
+  <line x1="610" y1="165" x2="718" y2="165"
+        stroke="#3b82f6" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <text x="664" y="158" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#f59e0b">确认</text>
+
+  <!-- =====================
+       CANCEL BRANCHES (gray, going downward)
+       ===================== -->
+
+  <!-- From Step 2: cancel branch -->
+  <path d="M495,230 L495,285 L155,285 L155,240"
+        stroke="#374151" stroke-width="1.5" fill="none"
+        stroke-dasharray="5,3" marker-end="url(#arr-gray)"/>
+  <text x="320" y="300" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#4b5563">取消 → 返回初始状态</text>
+
+  <!-- From Step 3: undo branch -->
+  <path d="M835,230 L835,320 L495,320 L495,235"
+        stroke="#3b82f6" stroke-width="1.5" fill="none"
+        stroke-dasharray="5,3" marker-end="url(#arr-blue)"/>
+  <text x="665" y="336" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#3b82f6">撤销 → 数据恢复</text>
+
+  <!-- =====================
+       COUNTDOWN BAR (bottom)
+       ===================== -->
+  <text x="500" y="372" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="13" font-weight="600" fill="#94a3b8" letter-spacing="1">30 秒撤销窗口倒计时</text>
+
+  <!-- Bar track -->
+  <rect x="100" y="382" width="800" height="20" rx="10" fill="#0f1923" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Animated bar fill (showing ~70% elapsed) -->
+  <rect x="100" y="382" width="560" height="20" rx="10" fill="#1d4ed8" opacity="0.7"/>
+  <!-- Remaining: blue-green -->
+  <rect x="660" y="382" width="240" height="20"
+        rx="0" fill="#0d9488" opacity="0.6"/>
+  <rect x="840" y="382" width="60" height="20"
+        rx="0" fill="#10b981" opacity="0.5"/>
+  <!-- Right cap -->
+  <rect x="860" y="382" width="40" height="20" rx="10" fill="#10b981" opacity="0.5"/>
+
+  <!-- Countdown ticks -->
+  <text x="100" y="417" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="9" fill="#374151">0s</text>
+  <text x="300" y="417" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="9" fill="#374151">10s</text>
+  <text x="500" y="417" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="9" fill="#374151">20s</text>
+  <text x="700" y="417" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="9" fill="#4b5563">25s</text>
+  <text x="900" y="417" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="9" fill="#10b981">30s</text>
+
+  <!-- Position indicator "当前" -->
+  <line x1="660" y1="376" x2="660" y2="408" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="660" y="430" text-anchor="middle"
+        font-family="'Courier New', monospace" font-size="9" fill="#f59e0b">当前</text>
+
+  <!-- Deadline label -->
+  <text x="900" y="455" text-anchor="end"
+        font-family="'Courier New', monospace" font-size="10" fill="#dc2626">超时 → 永久删除</text>
+
+  <!-- Expire label -->
+  <line x1="900" y1="382" x2="900" y2="455" stroke="#991b1b" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- =====================
+       Branch labels
+       ===================== -->
+  <text x="38" y="292" text-anchor="start"
+        font-family="'Courier New', monospace" font-size="9" fill="#374151">← 取消路径（灰色）</text>
+  <text x="750" y="358" text-anchor="start"
+        font-family="'Courier New', monospace" font-size="9" fill="#3b82f6">← 撤销路径（蓝色）</text>
+</svg>

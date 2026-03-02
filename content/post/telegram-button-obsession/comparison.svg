@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0c0a14"/>
+      <stop offset="100%" stop-color="#06040c"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="18" font-weight="700" fill="#f0ebff" letter-spacing="1">自由文本确认  vs  按钮确认</text>
+
+  <!-- ===== LEFT PANEL: Free Text ===== -->
+  <rect x="36" y="56" width="390" height="390" rx="12" fill="#120408" stroke="#7f1d1d" stroke-width="1.5"/>
+
+  <!-- Left header -->
+  <rect x="36" y="56" width="390" height="52" rx="12" fill="#1c0606"/>
+  <rect x="36" y="90" width="390" height="18" fill="#1c0606"/>
+  <text x="231" y="89" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="16" font-weight="700" fill="#fca5a5">自由文本确认</text>
+  <text x="231" y="103" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="10" fill="#7f1d1d" letter-spacing="2">FREE TEXT INPUT</text>
+
+  <!-- Left: Big stat -->
+  <text x="231" y="166" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="72" font-weight="800" fill="#dc2626" filter="url(#glow)" opacity="0.85">12%</text>
+  <text x="231" y="188" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="12" fill="#7f1d1d" letter-spacing="2">输入错误率</text>
+
+  <!-- Left: Metrics -->
+  <line x1="56" y1="208" x2="406" y2="208" stroke="#3d0f0f" stroke-width="1"/>
+
+  <!-- Metric row 1 -->
+  <rect x="56" y="218" width="10" height="10" rx="2" fill="#dc2626"/>
+  <text x="74" y="228" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#fca5a5">输入错误率</text>
+  <text x="400" y="228" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#ef4444">高 ⬆</text>
+
+  <!-- Metric row 2 -->
+  <rect x="56" y="248" width="10" height="10" rx="2" fill="#dc2626" opacity="0.7"/>
+  <text x="74" y="258" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#fca5a5">认知负荷</text>
+  <text x="400" y="258" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#ef4444">高 ⬆</text>
+
+  <!-- Metric row 3 -->
+  <rect x="56" y="278" width="10" height="10" rx="2" fill="#dc2626" opacity="0.5"/>
+  <text x="74" y="288" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#fca5a5">撤销窗口</text>
+  <text x="400" y="288" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#ef4444">无 ✗</text>
+
+  <!-- Metric row 4 -->
+  <rect x="56" y="308" width="10" height="10" rx="2" fill="#dc2626" opacity="0.3"/>
+  <text x="74" y="318" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#fca5a5">防误触能力</text>
+  <text x="400" y="318" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#ef4444">弱 ✗</text>
+
+  <!-- Metric row 5 -->
+  <rect x="56" y="338" width="10" height="10" rx="2" fill="#dc2626" opacity="0.2"/>
+  <text x="74" y="348" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#fca5a5">瞬间识别</text>
+  <text x="400" y="348" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#ef4444">难 ✗</text>
+
+  <!-- Left bottom demo -->
+  <rect x="56" y="368" width="370" height="60" rx="8" fill="#0f0406" stroke="#3d0f0f" stroke-width="1"/>
+  <text x="76" y="388" font-family="'Courier New', monospace" font-size="10" fill="#6b7280">[系统] 请输入 yes 确认：</text>
+  <text x="76" y="406" font-family="'Courier New', monospace" font-size="10" fill="#fca5a5">[用户] yse   → ❌ → YES → ❌ → fuck → ❌</text>
+  <text x="76" y="421" font-family="'Courier New', monospace" font-size="9" fill="#4b5563">用户在压力下更容易犯低级错误</text>
+
+  <!-- ===== RIGHT PANEL: Buttons ===== -->
+  <rect x="474" y="56" width="390" height="390" rx="12" fill="#030e0a" stroke="#065f46" stroke-width="1.5"/>
+
+  <!-- Right header -->
+  <rect x="474" y="56" width="390" height="52" rx="12" fill="#041a0e"/>
+  <rect x="474" y="90" width="390" height="18" fill="#041a0e"/>
+  <text x="669" y="89" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="16" font-weight="700" fill="#6ee7b7">按钮确认</text>
+  <text x="669" y="103" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="10" fill="#065f46" letter-spacing="2">BUTTON INTERACTION</text>
+
+  <!-- Right: Big stat -->
+  <text x="669" y="166" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="72" font-weight="800" fill="#10b981" filter="url(#glow)" opacity="0.85">0%</text>
+  <text x="669" y="188" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="12" fill="#065f46" letter-spacing="2">输入错误率</text>
+
+  <!-- Right: Metrics -->
+  <line x1="494" y1="208" x2="844" y2="208" stroke="#0d3b28" stroke-width="1"/>
+
+  <!-- Metric row 1 -->
+  <rect x="494" y="218" width="10" height="10" rx="2" fill="#10b981"/>
+  <text x="512" y="228" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#6ee7b7">输入错误率</text>
+  <text x="838" y="228" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#10b981">零 ✓</text>
+
+  <!-- Metric row 2 -->
+  <rect x="494" y="248" width="10" height="10" rx="2" fill="#10b981" opacity="0.8"/>
+  <text x="512" y="258" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#6ee7b7">认知负荷</text>
+  <text x="838" y="258" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#10b981">低 ✓</text>
+
+  <!-- Metric row 3 -->
+  <rect x="494" y="278" width="10" height="10" rx="2" fill="#10b981" opacity="0.6"/>
+  <text x="512" y="288" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#6ee7b7">撤销窗口</text>
+  <text x="838" y="288" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#10b981">30秒 ✓</text>
+
+  <!-- Metric row 4 -->
+  <rect x="494" y="308" width="10" height="10" rx="2" fill="#10b981" opacity="0.4"/>
+  <text x="512" y="318" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#6ee7b7">防误触能力</text>
+  <text x="838" y="318" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#10b981">强 ✓</text>
+
+  <!-- Metric row 5 -->
+  <rect x="494" y="338" width="10" height="10" rx="2" fill="#10b981" opacity="0.3"/>
+  <text x="512" y="348" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#6ee7b7">瞬间识别</text>
+  <text x="838" y="348" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#10b981">易 ✓</text>
+
+  <!-- Right bottom demo: button UI -->
+  <rect x="494" y="368" width="370" height="60" rx="8" fill="#030e0a" stroke="#0d3b28" stroke-width="1"/>
+  <text x="514" y="388" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#6b7280">⚠️ 确认删除 47GB 数据？</text>
+  <!-- Mini button mockups -->
+  <rect x="514" y="396" width="100" height="22" rx="5" fill="#dc2626"/>
+  <text x="564" y="411" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="white" font-weight="600">确认删除</text>
+  <rect x="624" y="396" width="70" height="22" rx="5" fill="#1e2640" stroke="#374151" stroke-width="1"/>
+  <text x="659" y="411" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#9ca3af">取消</text>
+  <text x="514" y="423" font-family="'Courier New', monospace" font-size="9" fill="#4b5563">点击即确认，零输入，零误判</text>
+
+  <!-- VS divider -->
+  <text x="450" y="265" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="20" font-weight="900" fill="#2d1b4e" opacity="0.8">VS</text>
+</svg>

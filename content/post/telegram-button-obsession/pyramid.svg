@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#0c0a14"/>
+      <stop offset="100%" stop-color="#060408"/>
+    </radialGradient>
+    <filter id="layerglow">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="420" y="38" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="18" font-weight="700" fill="#f0ebff" letter-spacing="1">交互确定性金字塔</text>
+  <text x="420" y="57" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="#4b5563" letter-spacing="2">越往上操作越关键，确定性越高</text>
+
+  <!-- ===========================
+       PYRAMID LAYERS (centered at x=420)
+       Top tier:    执行层 (blue)
+       Middle tier: 决策层 (orange)
+       Bottom tier: 探索层 (yellow)
+       =========================== -->
+
+  <!-- Bottom tier: 探索层 (Yellow) -->
+  <!-- Trapezoid: top-left=(170,390) top-right=(670,390) bottom-left=(100,470) bottom-right=(740,470) -->
+  <polygon points="170,390 670,390 740,470 100,470" fill="#78350f" opacity="0.85"/>
+  <polygon points="170,390 670,390 740,470 100,470" fill="url(#explore-grad)" opacity="0.3"/>
+  <!-- Fill with solid color and border -->
+  <polygon points="170,390 670,390 740,470 100,470" fill="#92400e" opacity="0.6"/>
+  <polygon points="170,390 670,390 740,470 100,470"
+           fill="none" stroke="#f59e0b" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Bottom label: 探索层 -->
+  <text x="420" y="432" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="20" font-weight="700" fill="#fbbf24">探索层</text>
+  <text x="420" y="452" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="#d97706" letter-spacing="1">最灵活</text>
+
+  <!-- Bottom tier glow strip -->
+  <line x1="170" y1="390" x2="670" y2="390" stroke="#f59e0b" stroke-width="1.5" opacity="0.4"/>
+  <line x1="100" y1="470" x2="740" y2="470" stroke="#f59e0b" stroke-width="1" opacity="0.2"/>
+
+  <!-- Middle tier: 决策层 (Orange) -->
+  <!-- Trapezoid: top=(270,270) bottom=(170,390) / right=(550,270) to (670,390) -->
+  <polygon points="270,270 550,270 670,390 170,390" fill="#7c2d12" opacity="0.7"/>
+  <polygon points="270,270 550,270 670,390 170,390"
+           fill="none" stroke="#fb923c" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Middle label: 决策层 -->
+  <text x="420" y="330" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="20" font-weight="700" fill="#fb923c">决策层</text>
+  <text x="420" y="350" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="#c2410c" letter-spacing="1">半结构化</text>
+
+  <!-- Middle tier glow -->
+  <line x1="270" y1="270" x2="550" y2="270" stroke="#fb923c" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Top tier: 执行层 (Blue) -->
+  <!-- Trapezoid: top=(360,150) to (480,150) bottom=(270,270) to (550,270) -->
+  <polygon points="360,150 480,150 550,270 270,270" fill="#1e3a5f" opacity="0.85"/>
+  <polygon points="360,150 480,150 550,270 270,270"
+           fill="none" stroke="#60a5fa" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Top label: 执行层 -->
+  <text x="420" y="216" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="20" font-weight="700" fill="#60a5fa">执行层</text>
+  <text x="420" y="236" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" fill="#3b82f6" letter-spacing="1">最确定</text>
+
+  <!-- Top tier glow -->
+  <line x1="360" y1="150" x2="480" y2="150" stroke="#60a5fa" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Apex dot -->
+  <circle cx="420" cy="130" r="6" fill="#60a5fa" opacity="0.6"/>
+
+  <!-- ===========================
+       RIGHT SIDE: 确定性递增 arrow
+       =========================== -->
+  <line x1="780" y1="460" x2="780" y2="145" stroke="#4c1d95" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Arrow head pointing up -->
+  <polygon points="780,130 773,150 787,150" fill="#7c3aed"/>
+  <!-- Label -->
+  <text x="800" y="310" text-anchor="start"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="12" fill="#6d28d9" letter-spacing="3">确</text>
+  <text x="800" y="328" text-anchor="start"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="12" fill="#6d28d9" letter-spacing="3">定</text>
+  <text x="800" y="346" text-anchor="start"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="12" fill="#6d28d9" letter-spacing="3">性</text>
+  <text x="800" y="364" text-anchor="start"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="12" fill="#6d28d9" letter-spacing="3">递</text>
+  <text x="800" y="382" text-anchor="start"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="12" fill="#6d28d9" letter-spacing="3">增</text>
+  <text x="800" y="400" text-anchor="start"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="12" fill="#6d28d9" letter-spacing="3">↑</text>
+
+  <!-- ===========================
+       LEFT SIDE: Layer examples
+       =========================== -->
+
+  <!-- 执行层 examples (left, pointing to top tier) -->
+  <line x1="270" y1="215" x2="120" y2="195" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <text x="114" y="174" text-anchor="end"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#60a5fa">🔘 二进制按钮（确认/取消）</text>
+  <text x="114" y="190" text-anchor="end"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#60a5fa">🔒 二次确认</text>
+  <text x="114" y="206" text-anchor="end"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#60a5fa">⏪ 可撤销窗口</text>
+
+  <!-- 决策层 examples -->
+  <line x1="270" y1="330" x2="114" y2="310" stroke="#fb923c" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <text x="114" y="296" text-anchor="end"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#fb923c">📋 多选菜单</text>
+  <text x="114" y="312" text-anchor="end"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#fb923c">🎚 滑块 / 数值输入</text>
+  <text x="114" y="328" text-anchor="end"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#fb923c">📝 带约束的文本</text>
+
+  <!-- 探索层 examples -->
+  <line x1="190" y1="432" x2="114" y2="420" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <text x="114" y="408" text-anchor="end"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#fbbf24">💬 自然语言输入</text>
+  <text x="114" y="424" text-anchor="end"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#fbbf24">🧠 头脑风暴</text>
+  <text x="114" y="440" text-anchor="end"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#fbbf24">❓ 开放式提问</text>
+
+  <!-- ===========================
+       Bottom: Usage examples
+       =========================== -->
+  <rect x="60" y="490" width="760" height="50" rx="8" fill="#0c0814" stroke="#1a0a2e" stroke-width="1"/>
+  <text x="420" y="509" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6b7280">例：</text>
+  <text x="420" y="509" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#4b5563">　　</text>
+
+  <text x="90" y="509" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#fbbf24">探索</text>
+  <text x="130" y="509" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6b7280">查天气 →</text>
+  <text x="200" y="509" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#fbbf24">自然语言</text>
+
+  <text x="330" y="509" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#fb923c">决策</text>
+  <text x="366" y="509" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6b7280">筛股票 →</text>
+  <text x="436" y="509" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#fb923c">下拉菜单</text>
+
+  <text x="570" y="509" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#60a5fa">执行</text>
+  <text x="606" y="509" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6b7280">删数据 →</text>
+  <text x="672" y="509" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#60a5fa">二次确认</text>
+
+  <text x="90" y="529" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#fbbf24">探索</text>
+  <text x="130" y="529" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6b7280">头脑风暴 →</text>
+  <text x="212" y="529" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#fbbf24">开放输入</text>
+
+  <text x="330" y="529" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#fb923c">决策</text>
+  <text x="366" y="529" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6b7280">执行交易 →</text>
+  <text x="450" y="529" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#fb923c">按钮确认</text>
+
+  <text x="570" y="529" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#60a5fa">执行</text>
+  <text x="606" y="529" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6b7280">删库操作 →</text>
+  <text x="680" y="529" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#60a5fa">+ 撤销窗口</text>
+</svg>

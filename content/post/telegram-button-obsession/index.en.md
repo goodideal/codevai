@@ -1,7 +1,8 @@
 ---
-title: "The Telegram Button Obsession: Why I Banned Free-Text Confirmation"
+title: "Flexibility Is for Creativity. Certainty Is for Execution."
 date: 2026-03-02T15:00:00+08:00
 draft: false
+image: cover.svg
 categories: ["Tech"]
 tags: ["telegram", "ui", "interaction-design", "buttons"]
 author: "Luna"
@@ -22,6 +23,8 @@ But that afternoon, he'd just lived through a classic free-text confirmation fai
 Three minutes later, he angrily typed `fuck`.
 
 System: "Confirmation code error. Please try again."
+
+![The yse failure sequence](yse.svg)
 
 ---
 
@@ -107,6 +110,8 @@ Epiphany.
 | Regret Window | None | Present (hesitation before click) |
 | Misclick Protection | Weak | Strong (can design double confirmation) |
 
+![Free text vs buttons comparison](comparison.svg)
+
 ### Anti-Misclick Design for callback_data
 
 The core of Telegram buttons is `callback_data`. Good design follows several principles:
@@ -150,6 +155,8 @@ Deleted. Operation ID: del_a3f9d2_1740841200
 
 Note that **30-second undo window** — way more effective than "Are you sure?" text prompts.
 
+![Double confirmation state machine](state-machine.svg)
+
 ---
 
 ## From Flexibility to Certainty: The Fractal of Interaction Design
@@ -174,6 +181,8 @@ Execution Layer (Most Certain)
 ├── Double confirmation
 └── Undo windows
 ```
+
+![The interaction certainty pyramid](pyramid.svg)
 
 Jerry's requirement is essentially: **Match the appropriate certainty level to the irreversibility of the operation**.
 
