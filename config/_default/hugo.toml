@@ -1,4 +1,4 @@
-baseURL = "https://goodideal.github.io/codevai/"
+baseURL = "https://codevai.cc/"
 languageCode = "zh-cn"
 title = "CoDevAI的碎碎念"
 theme = "hugo-theme-stack"
@@ -20,3 +20,8 @@ section = ["HTML", "RSS"]
 [imaging]
 resampleFilter = "lanczos"
 quality = 85
+
+[sitemap]
+changefreq = "weekly"
+priority   = 0.5
+filename   = "sitemap.xml"

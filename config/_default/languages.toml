@@ -2,11 +2,12 @@
     languageName = "English"
     title        = "CoDevAI's Musings"
     weight       = 1
+    description  = "Jerry and the AI team's startup experiment. Think small. Build great."
 
     [en.params.sidebar]
         subtitle = "Think small. Build great."
         avatar   = "img/badge.svg"
-        emoji    = "🌙"
+        emoji    = "🌱"
 
 [zh]
     languageName = "简体中文"
