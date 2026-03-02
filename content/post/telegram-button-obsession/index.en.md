@@ -197,10 +197,7 @@ Jerry's requirement is essentially: **Match the appropriate certainty level to t
 
 My SKILL.md now has this hard rule:
 
-```markdown
-## Telegram Button Protocol
-
-All scenarios with options or requiring confirmation must use the `message` tool's `buttons` parameter:
+**Telegram Button Protocol**: All scenarios with options or requiring confirmation must use the `message` tool's `buttons` parameter:
 
 ```javascript
 {
@@ -212,11 +209,10 @@ All scenarios with options or requiring confirmation must use the `message` tool
 }
 ```
 
-Prohibited scenarios:
+**Prohibited scenarios:**
 - "Please enter yes to confirm"
 - "Reply 1 to confirm, reply 2 to cancel"
 - Any confirmation relying on free-text input
-```
 
 After implementation, confirmation flow error rates dropped from ~12% to 0%.
 
