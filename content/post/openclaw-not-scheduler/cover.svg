@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a0814"/>
+      <stop offset="100%" stop-color="#040208"/>
+    </radialGradient>
+    <filter id="textglow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Center divider -->
+  <line x1="600" y1="90" x2="600" y2="570" stroke="#1a0a2e" stroke-width="1" stroke-dasharray="5,4" opacity="0.6"/>
+
+  <!-- VS badge -->
+  <rect x="574" y="270" width="52" height="36" rx="18" fill="#0d0a1a" stroke="#2d1b4e" stroke-width="1.5"/>
+  <text x="600" y="294" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="bold" fill="#4c1d95">VS</text>
+
+  <!-- ===== LEFT PANEL (WRONG: scheduler) ===== -->
+  <rect x="36" y="82" width="528" height="470" rx="10" fill="#0f0408" stroke="#3d0f0f" stroke-width="1"/>
+  <rect x="36" y="82" width="528" height="34" rx="10" fill="#1c0808"/>
+  <rect x="36" y="102" width="528" height="14" fill="#1c0808"/>
+  <text x="300" y="105" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#ef4444" letter-spacing="3" opacity="0.9">❌  MISCONCEPTION</text>
+
+  <text x="300" y="142" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="15" font-weight="600" fill="#fca5a5" opacity="0.85">任务调度器 · 负载分发器</text>
+
+  <!-- Task Queue -->
+  <rect x="210" y="158" width="180" height="46" rx="6" fill="#180606" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="300" y="180" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#ef4444">Task Queue</text>
+  <text x="300" y="196" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#7f1d1d" opacity="0.7">离散任务 · 批量处理</text>
+
+  <!-- Fan out arrows -->
+  <line x1="300" y1="204" x2="300" y2="230" stroke="#dc2626" stroke-width="1.5" opacity="0.45"/>
+  <line x1="300" y1="230" x2="110" y2="270" stroke="#dc2626" stroke-width="1" opacity="0.35"/>
+  <line x1="300" y1="230" x2="300" y2="270" stroke="#dc2626" stroke-width="1.2" opacity="0.4"/>
+  <line x1="300" y1="230" x2="490" y2="270" stroke="#dc2626" stroke-width="1" opacity="0.35"/>
+
+  <!-- Node 1 -->
+  <rect x="62" y="270" width="96" height="54" rx="6" fill="#120404" stroke="#7f1d1d" stroke-width="1"/>
+  <text x="110" y="292" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#fca5a5">Node</text>
+  <text x="110" y="307" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#7f1d1d" opacity="0.7">算力资源</text>
+  <text x="110" y="318" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#5a0b0b" opacity="0.6">可替换</text>
+
+  <!-- Node 2 -->
+  <rect x="252" y="270" width="96" height="54" rx="6" fill="#120404" stroke="#7f1d1d" stroke-width="1"/>
+  <text x="300" y="292" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#fca5a5">Node</text>
+  <text x="300" y="307" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#7f1d1d" opacity="0.7">算力资源</text>
+  <text x="300" y="318" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#5a0b0b" opacity="0.6">可替换</text>
+
+  <!-- Node 3 -->
+  <rect x="442" y="270" width="96" height="54" rx="6" fill="#120404" stroke="#7f1d1d" stroke-width="1"/>
+  <text x="490" y="292" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#fca5a5">Node</text>
+  <text x="490" y="307" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#7f1d1d" opacity="0.7">算力资源</text>
+  <text x="490" y="318" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#5a0b0b" opacity="0.6">可替换</text>
+
+  <text x="300" y="358" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#dc2626" opacity="0.5">负载均衡 · 扩缩容 · 资源调度</text>
+
+  <!-- Left bullets -->
+  <line x1="76" y1="376" x2="76" y2="464" stroke="#3d0f0f" stroke-width="1" opacity="0.7"/>
+  <text x="88" y="392" font-family="'Courier New', monospace" font-size="10" fill="#7f1d1d" opacity="0.75">关注   任务跑在哪台机器</text>
+  <text x="88" y="412" font-family="'Courier New', monospace" font-size="10" fill="#7f1d1d" opacity="0.75">任务   离散 · 批量</text>
+  <text x="88" y="432" font-family="'Courier New', monospace" font-size="10" fill="#7f1d1d" opacity="0.75">节点   算力单元（可替换）</text>
+  <text x="88" y="452" font-family="'Courier New', monospace" font-size="10" fill="#7f1d1d" opacity="0.75">代表   Kubernetes · Airflow</text>
+
+  <text x="300" y="518" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="10" fill="#dc2626" letter-spacing="2" opacity="0.22">NOT WHAT OPENCLAW DOES</text>
+
+  <!-- ===== RIGHT PANEL (CORRECT: orchestrator) ===== -->
+  <rect x="636" y="82" width="528" height="470" rx="10" fill="#030c0a" stroke="#0d3b28" stroke-width="1"/>
+  <rect x="636" y="82" width="528" height="34" rx="10" fill="#041a0e"/>
+  <rect x="636" y="102" width="528" height="14" fill="#041a0e"/>
+  <text x="900" y="105" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#10b981" letter-spacing="3" opacity="0.9">✅  REALITY</text>
+
+  <text x="900" y="142" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="15" font-weight="600" fill="#6ee7b7" opacity="0.85">能力编排器</text>
+
+  <!-- Gateway -->
+  <rect x="810" y="158" width="180" height="46" rx="6" fill="#041a0e" stroke="#059669" stroke-width="1.5"/>
+  <text x="900" y="180" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#10b981">Gateway</text>
+  <text x="900" y="196" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#065f46" opacity="0.8">意图识别 · 路由 · 会话管理</text>
+
+  <!-- Fan arrows to 4 agents: centers at 714, 838, 962, 1086 -->
+  <line x1="900" y1="204" x2="900" y2="230" stroke="#059669" stroke-width="1.5" opacity="0.45"/>
+  <line x1="900" y1="230" x2="714" y2="270" stroke="#0d9488" stroke-width="1" opacity="0.4"/>
+  <line x1="900" y1="230" x2="838" y2="270" stroke="#7c3aed" stroke-width="1" opacity="0.4"/>
+  <line x1="900" y1="230" x2="962" y2="270" stroke="#d97706" stroke-width="1" opacity="0.4"/>
+  <line x1="900" y1="230" x2="1086" y2="270" stroke="#2563eb" stroke-width="1" opacity="0.4"/>
+
+  <!-- Agent A: File/Shell (center x=714) -->
+  <rect x="666" y="270" width="96" height="58" rx="6" fill="#05100e" stroke="#0d9488" stroke-width="1.2"/>
+  <text x="714" y="291" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#5eead4">Agent A</text>
+  <text x="714" y="305" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#0d9488" opacity="0.85">文件 / Shell</text>
+  <text x="714" y="320" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#134e4a" opacity="0.7">Skills × 3</text>
+
+  <!-- Agent B: Browser (center x=838) -->
+  <rect x="790" y="270" width="96" height="58" rx="6" fill="#080810" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="838" y="291" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#c4b5fd">Agent B</text>
+  <text x="838" y="305" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#7c3aed" opacity="0.85">浏览器</text>
+  <text x="838" y="320" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#4c1d95" opacity="0.7">Skills × 5</text>
+
+  <!-- Agent C: IM/Mail (center x=962) -->
+  <rect x="914" y="270" width="96" height="58" rx="6" fill="#0c0a04" stroke="#d97706" stroke-width="1.2"/>
+  <text x="962" y="291" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#fcd34d">Agent C</text>
+  <text x="962" y="305" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#d97706" opacity="0.85">IM / 邮件</text>
+  <text x="962" y="320" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#78350f" opacity="0.7">Skills × 4</text>
+
+  <!-- Agent D: API (center x=1086) -->
+  <rect x="1038" y="270" width="96" height="58" rx="6" fill="#040810" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="1086" y="291" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd">Agent D</text>
+  <text x="1086" y="305" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#2563eb" opacity="0.85">业务 API</text>
+  <text x="1086" y="320" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#1e3a8a" opacity="0.7">Skills × 6</text>
+
+  <text x="900" y="358" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#10b981" opacity="0.5">分工明确 · 职责稳定 · 长期在线</text>
+
+  <!-- Right bullets -->
+  <line x1="676" y1="376" x2="676" y2="464" stroke="#0d3b28" stroke-width="1" opacity="0.7"/>
+  <text x="688" y="392" font-family="'Courier New', monospace" font-size="10" fill="#065f46" opacity="0.75">关注   事情怎么做完</text>
+  <text x="688" y="412" font-family="'Courier New', monospace" font-size="10" fill="#065f46" opacity="0.75">任务   连续 · 交互式</text>
+  <text x="688" y="432" font-family="'Courier New', monospace" font-size="10" fill="#065f46" opacity="0.75">节点   能力角色（不可替换）</text>
+  <text x="688" y="452" font-family="'Courier New', monospace" font-size="10" fill="#065f46" opacity="0.75">本质   AI Agent 基础设施</text>
+
+  <text x="900" y="518" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="10" fill="#10b981" letter-spacing="2" opacity="0.22">AI AGENT INFRASTRUCTURE</text>
+
+  <!-- ===== TITLE ===== -->
+  <text x="600" y="50" text-anchor="middle"
+        font-family="'Helvetica Neue', 'Inter', Arial, sans-serif"
+        font-size="30" font-weight="700" fill="#f0ebff" filter="url(#textglow)">
+    OpenClaw 并不是负载调度器
+  </text>
+
+  <!-- Bottom tagline -->
+  <text x="600" y="596" text-anchor="middle"
+        font-family="'Helvetica Neue', 'Inter', Arial, sans-serif"
+        font-size="12" fill="#4c1d95" letter-spacing="3" opacity="0.65">
+    把对的事，交给对的 Agent 去完成
+  </text>
+</svg>

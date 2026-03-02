@@ -1,14 +1,20 @@
 mainSections   = ["post"]
 rssFullContent = true
 favicon        = "img/badge.svg"
+description    = "Jerry 与 AI 团队的共同创业实验。一人一念，积微成著。"
+
+[defaultImage]
+    opengraph = true
+    twitter   = true
+    homepage  = false
 
 [footer]
     since = 2020
 
 [sidebar]
-    emoji    = "✏️"
+    emoji    = "🌱"
     subtitle = "一人一念，积微成著。"
-    avatar   = "img/jerry.jpg"
+    avatar   = "img/badge.svg"
 
 [article]
     [article.license]

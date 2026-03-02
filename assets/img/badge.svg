@@ -1,92 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
   <defs>
-    <radialGradient id="bg" cx="40%" cy="35%" r="70%">
-      <stop offset="0%" stop-color="#1e1b4b"/>
-      <stop offset="100%" stop-color="#080818"/>
+    <radialGradient id="bg" cx="44%" cy="38%" r="68%">
+      <stop offset="0%" stop-color="#1a1740"/>
+      <stop offset="100%" stop-color="#07051a"/>
     </radialGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#6366f1"/>
+    <radialGradient id="moonSurface" cx="32%" cy="28%" r="70%">
+      <stop offset="0%" stop-color="#f5f3ff"/>
+      <stop offset="42%" stop-color="#ede9fe"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </radialGradient>
+    <linearGradient id="wordmark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#c4b5fd"/>
+      <stop offset="48%"  stop-color="#f0ebff"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
     </linearGradient>
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#818cf8"/>
-      <stop offset="50%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#818cf8"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="moonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="11" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <filter id="sparkGlow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="frame">
+      <rect width="400" height="400" rx="52"/>
+    </clipPath>
   </defs>
 
-  <!-- Badge background -->
-  <circle cx="250" cy="250" r="245" fill="url(#bg)"/>
+  <g clip-path="url(#frame)">
+    <!-- Background -->
+    <rect width="400" height="400" fill="url(#bg)"/>
 
-  <!-- Outer ring -->
-  <circle cx="250" cy="250" r="244" fill="none" stroke="url(#accent)" stroke-width="4"/>
+    <!-- Ambient aurora -->
+    <ellipse cx="188" cy="148" rx="178" ry="82" fill="#3b0764" opacity="0.07"/>
+    <ellipse cx="196" cy="140" rx="122" ry="54" fill="#4c1d95" opacity="0.08"/>
 
-  <!-- Inner decorative ring -->
-  <circle cx="250" cy="250" r="228" fill="none" stroke="#6366f1" stroke-width="0.8" opacity="0.35"/>
+    <!-- Stars -->
+    <circle cx="52"  cy="66"  r="1.5" fill="white"   opacity="0.75"/>
+    <circle cx="105" cy="44"  r="1"   fill="white"   opacity="0.50"/>
+    <circle cx="288" cy="50"  r="1.2" fill="#e0d7ff" opacity="0.65"/>
+    <circle cx="358" cy="80"  r="1"   fill="white"   opacity="0.45"/>
+    <circle cx="70"  cy="115" r="1"   fill="white"   opacity="0.50"/>
+    <circle cx="336" cy="128" r="1.5" fill="white"   opacity="0.55"/>
+    <circle cx="48"  cy="308" r="1"   fill="#c4b5fd" opacity="0.45"/>
+    <circle cx="356" cy="322" r="1.2" fill="white"   opacity="0.38"/>
+    <circle cx="78"  cy="362" r="1"   fill="white"   opacity="0.35"/>
+    <circle cx="348" cy="372" r="1.5" fill="#a78bfa" opacity="0.40"/>
+    <circle cx="270" cy="74"  r="1"   fill="white"   opacity="0.45"/>
+    <circle cx="42"  cy="188" r="1"   fill="#c4b5fd" opacity="0.35"/>
+    <circle cx="362" cy="200" r="1.2" fill="white"   opacity="0.30"/>
 
-  <!-- Hexagon frame -->
-  <polygon points="250,72 398,161 398,339 250,428 102,339 102,161"
-           fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.15"/>
+    <!-- Orbit ellipse (tilted -20° around moon center) -->
+    <ellipse cx="195" cy="151" rx="116" ry="48" fill="none"
+             stroke="#6d28d9" stroke-width="1.2" opacity="0.36"
+             transform="rotate(-20, 195, 151)"/>
 
-  <!-- Top neural net (5 nodes = 5 AI teammates) -->
-  <line x1="148" y1="138" x2="192" y2="112" stroke="#38bdf8" stroke-width="1.5" opacity="0.45"/>
-  <line x1="192" y1="112" x2="250" y2="125" stroke="#38bdf8" stroke-width="1.5" opacity="0.45"/>
-  <line x1="250" y1="125" x2="308" y2="112" stroke="#38bdf8" stroke-width="1.5" opacity="0.45"/>
-  <line x1="308" y1="112" x2="352" y2="138" stroke="#38bdf8" stroke-width="1.5" opacity="0.45"/>
-  <line x1="148" y1="138" x2="250" y2="125" stroke="#6366f1" stroke-width="0.8" opacity="0.25"/>
-  <line x1="352" y1="138" x2="250" y2="125" stroke="#6366f1" stroke-width="0.8" opacity="0.25"/>
-  <circle cx="148" cy="138" r="7" fill="#38bdf8" filter="url(#glow)" opacity="0.9"/>
-  <circle cx="192" cy="112" r="5" fill="#818cf8" opacity="0.85"/>
-  <circle cx="250" cy="125" r="7" fill="#38bdf8" filter="url(#glow)" opacity="0.9"/>
-  <circle cx="308" cy="112" r="5" fill="#818cf8" opacity="0.85"/>
-  <circle cx="352" cy="138" r="7" fill="#38bdf8" filter="url(#glow)" opacity="0.9"/>
+    <!-- Moon aura layers -->
+    <circle cx="188" cy="150" r="92" fill="#7c3aed" opacity="0.05"/>
+    <circle cx="188" cy="150" r="74" fill="#6d28d9" opacity="0.07"/>
 
-  <!-- Code bracket left -->
-  <text x="58" y="290" font-family="'Courier New', monospace" font-size="90"
-        fill="#6366f1" opacity="0.55" font-weight="bold">&lt;</text>
+    <!-- Moon body -->
+    <circle cx="188" cy="150" r="65" fill="url(#moonSurface)" filter="url(#moonGlow)"/>
+    <!-- Crescent shadow -->
+    <circle cx="215" cy="136" r="55" fill="#07051a"/>
 
-  <!-- Code bracket right -->
-  <text x="308" y="290" font-family="'Courier New', monospace" font-size="90"
-        fill="#6366f1" opacity="0.55" font-weight="bold">/&gt;</text>
+    <!-- Crescent surface texture (craters) -->
+    <circle cx="160" cy="166" r="7"   fill="none" stroke="#c4b5fd" stroke-width="0.7" opacity="0.20"/>
+    <circle cx="147" cy="140" r="4.5" fill="none" stroke="#c4b5fd" stroke-width="0.5" opacity="0.16"/>
+    <circle cx="172" cy="194" r="5.5" fill="none" stroke="#c4b5fd" stroke-width="0.5" opacity="0.14"/>
 
-  <!-- Main brand name -->
-  <text x="250" y="268"
-        font-family="'Arial Black', 'Arial Bold', sans-serif"
-        font-size="74" font-weight="900"
-        fill="url(#textGrad)"
-        text-anchor="middle"
-        letter-spacing="-1"
-        filter="url(#glow)">CoDevAI</text>
+    <!-- Orbiting node — the "Co" (human + AI in constant motion) -->
+    <circle cx="287" cy="106" r="14" fill="#a78bfa" filter="url(#sparkGlow)" opacity="0.88"/>
+    <circle cx="287" cy="106" r="7"  fill="#f8f5ff"/>
+    <circle cx="287" cy="106" r="18" fill="none" stroke="#7c3aed" stroke-width="0.8" opacity="0.28"/>
 
-  <!-- Tagline -->
-  <text x="250" y="308"
-        font-family="Arial, sans-serif"
-        font-size="20"
-        fill="#38bdf8"
-        text-anchor="middle"
-        letter-spacing="7"
-        opacity="0.75">AI · TEAM</text>
+    <!-- Trail particles (motion vector) -->
+    <circle cx="303" cy="117" r="4"   fill="#7c3aed" opacity="0.30"/>
+    <circle cx="314" cy="132" r="2.8" fill="#5b21b6" opacity="0.20"/>
+    <circle cx="320" cy="148" r="1.8" fill="#4c1d95" opacity="0.14"/>
 
-  <!-- Bottom neural net (mirror of top) -->
-  <line x1="148" y1="362" x2="192" y2="388" stroke="#38bdf8" stroke-width="1.5" opacity="0.45"/>
-  <line x1="192" y1="388" x2="250" y2="375" stroke="#38bdf8" stroke-width="1.5" opacity="0.45"/>
-  <line x1="250" y1="375" x2="308" y2="388" stroke="#38bdf8" stroke-width="1.5" opacity="0.45"/>
-  <line x1="308" y1="388" x2="352" y2="362" stroke="#38bdf8" stroke-width="1.5" opacity="0.45"/>
-  <line x1="148" y1="362" x2="250" y2="375" stroke="#6366f1" stroke-width="0.8" opacity="0.25"/>
-  <line x1="352" y1="362" x2="250" y2="375" stroke="#6366f1" stroke-width="0.8" opacity="0.25"/>
-  <circle cx="148" cy="362" r="7" fill="#38bdf8" filter="url(#glow)" opacity="0.9"/>
-  <circle cx="192" cy="388" r="5" fill="#818cf8" opacity="0.85"/>
-  <circle cx="250" cy="375" r="7" fill="#38bdf8" filter="url(#glow)" opacity="0.9"/>
-  <circle cx="308" cy="388" r="5" fill="#818cf8" opacity="0.85"/>
-  <circle cx="352" cy="362" r="7" fill="#38bdf8" filter="url(#glow)" opacity="0.9"/>
+    <!-- Wordmark: "Co" light + "DevAI" bold -->
+    <text x="200" y="286"
+          font-family="'Helvetica Neue', 'Inter', 'Segoe UI', Arial, sans-serif"
+          font-size="44" fill="url(#wordmark)"
+          text-anchor="middle" letter-spacing="0.5">
+      <tspan font-weight="300">Co</tspan><tspan font-weight="700">DevAI</tspan>
+    </text>
 
-  <!-- Cardinal tick marks on outer ring -->
-  <line x1="250" y1="6"  x2="250" y2="22"  stroke="#38bdf8" stroke-width="2.5" opacity="0.5"/>
-  <line x1="250" y1="478" x2="250" y2="494" stroke="#38bdf8" stroke-width="2.5" opacity="0.5"/>
-  <line x1="6"   y1="250" x2="22"   y2="250" stroke="#38bdf8" stroke-width="2.5" opacity="0.5"/>
-  <line x1="478" y1="250" x2="494" y2="250" stroke="#38bdf8" stroke-width="2.5" opacity="0.5"/>
+    <!-- Tagline -->
+    <text x="200" y="322"
+          font-family="'Helvetica Neue', 'Inter', Arial, sans-serif"
+          font-size="9.5" font-weight="400" letter-spacing="4.5"
+          fill="#7c3aed" text-anchor="middle" opacity="0.72">
+      THINK SMALL · BUILD GREAT
+    </text>
+  </g>
+
+  <!-- Outer border -->
+  <rect width="400" height="400" fill="none"
+        stroke="#2e1d6e" stroke-width="1.5" rx="52" opacity="0.65"/>
 </svg>

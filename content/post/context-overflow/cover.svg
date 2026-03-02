@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1a0a2e"/>
+      <stop offset="100%" stop-color="#06020f"/>
+    </radialGradient>
+    <radialGradient id="barFill" cx="0%" cy="50%" r="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="60%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </radialGradient>
+    <filter id="redglow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="textglow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle grid (terminal feel) -->
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#1a0a2e" stroke-width="1" opacity="0.6"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#1a0a2e" stroke-width="1" opacity="0.6"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#1a0a2e" stroke-width="1" opacity="0.4"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="#1a0a2e" stroke-width="1" opacity="0.4"/>
+
+  <!-- === Terminal block (left) === -->
+  <!-- Terminal window -->
+  <rect x="60" y="80" width="520" height="210" rx="8" fill="#0d0d1a" stroke="#2d1b4e" stroke-width="1.5"/>
+  <!-- Title bar -->
+  <rect x="60" y="80" width="520" height="28" rx="8" fill="#1a1030"/>
+  <rect x="60" y="96" width="520" height="12" fill="#1a1030"/>
+  <circle cx="84" cy="94" r="5" fill="#ef4444" opacity="0.8"/>
+  <circle cx="102" cy="94" r="5" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="120" cy="94" r="5" fill="#10b981" opacity="0.7"/>
+  <text x="290" y="98" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#6d28d9" opacity="0.8">OpenClaw — luna@bwg</text>
+
+  <!-- Terminal content -->
+  <text x="84" y="130" font-family="'Courier New', monospace" font-size="12" fill="#6d28d9" opacity="0.6">$ /status</text>
+
+  <!-- Context line — highlighted red -->
+  <rect x="72" y="136" width="496" height="22" rx="3" fill="#dc2626" opacity="0.12"/>
+  <text x="84" y="152" font-family="'Courier New', monospace" font-size="13" fill="#ef4444" filter="url(#textglow)">Context:    1.0m / 400k</text>
+  <text x="84" y="152" font-family="'Courier New', monospace" font-size="13" fill="#ef4444">
+    <tspan dx="230"> (256%)</tspan>
+  </text>
+
+  <text x="84" y="174" font-family="'Courier New', monospace" font-size="12" fill="#9ca3af" opacity="0.7">Compactions: 1</text>
+
+  <!-- Error line -->
+  <text x="84" y="196" font-family="'Courier New', monospace" font-size="11" fill="#ef4444" opacity="0.9">LLM request rejected:</text>
+  <text x="84" y="212" font-family="'Courier New', monospace" font-size="11" fill="#fca5a5" opacity="0.8">  Your input exceeds the context</text>
+  <text x="84" y="228" font-family="'Courier New', monospace" font-size="11" fill="#fca5a5" opacity="0.8">  window of this model</text>
+  <!-- Cursor -->
+  <rect x="84" y="252" width="8" height="14" fill="#7c3aed" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0;0.7" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- === Context bar (center-right) === -->
+  <!-- Label -->
+  <text x="660" y="115" font-family="'Courier New', monospace" font-size="11"
+        fill="#9ca3af" letter-spacing="2" opacity="0.7">CONTEXT USAGE</text>
+
+  <!-- Bar background -->
+  <rect x="660" y="128" width="480" height="44" rx="6" fill="#1a0a2e" stroke="#2d1b4e" stroke-width="1"/>
+
+  <!-- Normal zone (0–100%) -->
+  <rect x="660" y="128" width="187" height="44" rx="6" fill="#4c1d95" opacity="0.4"/>
+
+  <!-- Overflow zone (100–256%) — fill entirely, clipped -->
+  <rect x="660" y="128" width="480" height="44" rx="6" fill="url(#barFill)" filter="url(#redglow)" opacity="0.9"/>
+
+  <!-- 100% marker -->
+  <line x1="847" y1="118" x2="847" y2="182" stroke="#6d28d9" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8"/>
+  <text x="851" y="115" font-family="'Courier New', monospace" font-size="10" fill="#8b5cf6" opacity="0.9">100%</text>
+
+  <!-- Bar label inside -->
+  <text x="800" y="157" text-anchor="middle" font-family="'Courier New', monospace"
+        font-size="20" font-weight="bold" fill="white" filter="url(#textglow)">256%</text>
+
+  <!-- Tick marks -->
+  <text x="660" y="198" font-family="'Courier New', monospace" font-size="9" fill="#4c1d95" opacity="0.7">0</text>
+  <text x="835" y="198" font-family="'Courier New', monospace" font-size="9" fill="#4c1d95" opacity="0.7">400k</text>
+  <text x="1118" y="198" font-family="'Courier New', monospace" font-size="9" fill="#dc2626" opacity="0.8" text-anchor="end">1.0m →</text>
+
+  <!-- === Token flow visualization === -->
+  <!-- Label -->
+  <text x="660" y="248" font-family="'Courier New', monospace" font-size="11"
+        fill="#9ca3af" letter-spacing="2" opacity="0.7">SESSION TIMELINE</text>
+
+  <!-- Timeline bar -->
+  <rect x="660" y="262" width="480" height="8" rx="4" fill="#1a0a2e" stroke="#2d1b4e" stroke-width="1"/>
+
+  <!-- Messages as colored blocks on timeline -->
+  <!-- task confirm -->
+  <rect x="660" y="262" width="52" height="8" rx="2" fill="#4c1d95" opacity="0.8"/>
+  <!-- discussion -->
+  <rect x="716" y="262" width="88" height="8" fill="#5b21b6" opacity="0.8"/>
+  <!-- log dumps -->
+  <rect x="808" y="262" width="120" height="8" fill="#7c3aed" opacity="0.8"/>
+  <!-- /status calls -->
+  <rect x="932" y="262" width="48" height="8" fill="#dc2626" opacity="0.7"/>
+  <!-- more logs -->
+  <rect x="984" y="262" width="96" height="8" fill="#ef4444" opacity="0.9" filter="url(#redglow)"/>
+  <!-- overflow marker -->
+  <line x1="1080" y1="252" x2="1080" y2="280" stroke="#ef4444" stroke-width="2" opacity="0.9"/>
+  <text x="1084" y="260" font-family="'Courier New', monospace" font-size="9" fill="#ef4444">OVERFLOW</text>
+
+  <!-- Token labels -->
+  <text x="686" y="292" font-family="'Courier New', monospace" font-size="9" fill="#7c3aed" opacity="0.7" text-anchor="middle">任务确认</text>
+  <text x="760" y="292" font-family="'Courier New', monospace" font-size="9" fill="#8b5cf6" opacity="0.7" text-anchor="middle">方案讨论</text>
+  <text x="868" y="292" font-family="'Courier New', monospace" font-size="9" fill="#a78bfa" opacity="0.7" text-anchor="middle">日志输出</text>
+  <text x="956" y="292" font-family="'Courier New', monospace" font-size="9" fill="#ef4444" opacity="0.8" text-anchor="middle">/status</text>
+  <text x="1032" y="292" font-family="'Courier New', monospace" font-size="9" fill="#ef4444" opacity="0.9" text-anchor="middle">更多日志</text>
+
+  <!-- === Best practice panel (bottom) === -->
+  <rect x="60" y="340" width="1080" height="220" rx="8" fill="#0d0d1a" stroke="#1a1030" stroke-width="1"/>
+
+  <!-- Three columns -->
+  <!-- Col 1 -->
+  <text x="230" y="376" text-anchor="middle" font-family="'Courier New', monospace"
+        font-size="11" fill="#7c3aed" letter-spacing="2" opacity="0.8">❌  WRONG</text>
+  <text x="230" y="406" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="13" fill="#9ca3af" opacity="0.7">换模型</text>
+  <text x="230" y="428" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="13" fill="#9ca3af" opacity="0.7">反复 /status</text>
+  <text x="230" y="450" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="13" fill="#9ca3af" opacity="0.7">贴长日志</text>
+  <text x="230" y="472" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="13" fill="#9ca3af" opacity="0.7">一个 session 做所有事</text>
+
+  <!-- Divider -->
+  <line x1="440" y1="356" x2="440" y2="545" stroke="#1a1030" stroke-width="1.5"/>
+
+  <!-- Col 2 -->
+  <text x="600" y="376" text-anchor="middle" font-family="'Courier New', monospace"
+        font-size="11" fill="#ef4444" letter-spacing="2" filter="url(#textglow)">💥  RESULT</text>
+  <text x="600" y="410" text-anchor="middle" font-family="'Courier New', monospace"
+        font-size="14" fill="#ef4444" filter="url(#textglow)">Context: 1.0m / 400k</text>
+  <text x="600" y="440" text-anchor="middle" font-family="'Courier New', monospace"
+        font-size="22" font-weight="bold" fill="#ef4444" filter="url(#redglow)">256%</text>
+  <text x="600" y="472" text-anchor="middle" font-family="'Courier New', monospace"
+        font-size="11" fill="#fca5a5" opacity="0.8">LLM request rejected</text>
+
+  <!-- Divider -->
+  <line x1="760" y1="356" x2="760" y2="545" stroke="#1a1030" stroke-width="1.5"/>
+
+  <!-- Col 3 -->
+  <text x="930" y="376" text-anchor="middle" font-family="'Courier New', monospace"
+        font-size="11" fill="#10b981" letter-spacing="2" opacity="0.8">✅  RIGHT</text>
+  <text x="930" y="406" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="13" fill="#6ee7b7" opacity="0.8">/new 开新 session</text>
+  <text x="930" y="428" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="13" fill="#6ee7b7" opacity="0.8">一个 session 一件事</text>
+  <text x="930" y="450" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="13" fill="#6ee7b7" opacity="0.8">阶段性 Snapshot</text>
+  <text x="930" y="472" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="13" fill="#6ee7b7" opacity="0.8">结论才是资产</text>
+
+  <!-- Bottom tagline -->
+  <text x="600" y="532" text-anchor="middle"
+        font-family="'Helvetica Neue', 'Inter', Arial, sans-serif"
+        font-size="13" fill="#4c1d95" letter-spacing="3" opacity="0.6">
+    session 是易失的，结论才是资产
+  </text>
+
+  <!-- Title -->
+  <text x="320" y="55" text-anchor="middle"
+        font-family="'Helvetica Neue', 'Inter', Arial, sans-serif"
+        font-size="32" font-weight="700" fill="#f0ebff" filter="url(#textglow)">
+    Luna 不说话的那个下午
+  </text>
+</svg>
