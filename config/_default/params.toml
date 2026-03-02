@@ -6,9 +6,9 @@ favicon        = "img/badge.svg"
     since = 2020
 
 [sidebar]
-    emoji    = "✏️"
+    emoji    = "🌙"
     subtitle = "一人一念，积微成著。"
-    avatar   = "img/jerry.jpg"
+    avatar   = "img/badge.svg"
 
 [article]
     [article.license]

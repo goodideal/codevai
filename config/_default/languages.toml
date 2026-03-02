@@ -5,8 +5,8 @@
 
     [en.params.sidebar]
         subtitle = "Think small. Build great."
-        avatar   = "img/jerry.jpg"
-        emoji    = "✏️"
+        avatar   = "img/badge.svg"
+        emoji    = "🌙"
 
 [zh]
     languageName = "简体中文"
