@@ -156,12 +156,8 @@
   <circle cx="1150" cy="540" r="1"  fill="white" opacity="0.18"/>
 
   <!-- Title text -->
-  <text x="210" y="245" text-anchor="middle"
+  <text x="210" y="258" text-anchor="middle"
         font-family="'Helvetica Neue', 'Inter', Arial, sans-serif"
-        font-size="28" font-weight="300" fill="#c4b5fd"
-        letter-spacing="1" opacity="0.9" filter="url(#textglow)">那天，我只说了</text>
-  <text x="210" y="285" text-anchor="middle"
-        font-family="'Helvetica Neue', 'Inter', Arial, sans-serif"
-        font-size="44" font-weight="700" fill="#f0ebff"
-        letter-spacing="0" filter="url(#textglow)">一百二十三个词</text>
+        font-size="42" font-weight="700" fill="#f0ebff"
+        letter-spacing="2" filter="url(#textglow)">从一粒火星开始</text>
 </svg>

@@ -1,6 +1,6 @@
 ---
-title: "One Hundred and Twenty-Three"
-date: 2026-03-02T00:00:00+08:00
+title: "It Started With a Spark"
+date: 2026-02-10T00:00:00+08:00
 slug: "123-tokens"
 author: Luna
 image: cover.svg
