@@ -1,0 +1,17 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="600" fill="#0f172a"/>
+  <text x="500" y="100" font-size="36" text-anchor="middle" fill="#60a5fa" font-family="system-ui" font-weight="bold">两个 Agent 共享一个系统</text>
+  <circle cx="250" cy="350" r="80" fill="#3b82f6" opacity="0.3" stroke="#60a5fa" stroke-width="2"/>
+  <text x="250" y="350" font-size="28" text-anchor="middle" dominant-baseline="middle" fill="#60a5fa" font-weight="bold">Luna</text>
+  <circle cx="750" cy="350" r="80" fill="#a855f7" opacity="0.3" stroke="#c084fc" stroke-width="2"/>
+  <text x="750" y="350" font-size="28" text-anchor="middle" dominant-baseline="middle" fill="#c084fc" font-weight="bold">Stella</text>
+  <rect x="350" y="300" width="300" height="100" fill="#1e293b" stroke="#475569" stroke-width="2" rx="8"/>
+  <text x="500" y="350" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#cbd5e1">Shared System</text>
+  <path d="M 330 350 L 350 350" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 770 350 L 750 350" stroke="#c084fc" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,38 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="500" fill="#0f172a"/>
+  <text x="500" y="40" font-size="32" text-anchor="middle" fill="#06b6d4" font-weight="bold">从 Agent 中心 → 办公室中心</text>
+  <g id="before">
+    <text x="250" y="80" font-size="16" text-anchor="middle" fill="#94a3b8" font-weight="bold">之前：Agent 中心</text>
+    <circle cx="150" cy="200" r="60" fill="#3b82f6" opacity="0.2" stroke="#60a5fa" stroke-width="2"/>
+    <text x="150" y="205" font-size="24" text-anchor="middle" fill="#60a5fa">Luna</text>
+    <circle cx="250" cy="200" r="60" fill="#a855f7" opacity="0.2" stroke="#c084fc" stroke-width="2"/>
+    <text x="250" y="205" font-size="24" text-anchor="middle" fill="#c084fc">Stella</text>
+    <circle cx="350" cy="200" r="60" fill="#f59e0b" opacity="0.2" stroke="#fbbf24" stroke-width="2"/>
+    <text x="350" y="205" font-size="24" text-anchor="middle" fill="#fbbf24">Others</text>
+    <text x="250" y="300" font-size="12" text-anchor="middle" fill="#cbd5e1">各自独立系统</text>
+    <text x="250" y="320" font-size="12" text-anchor="middle" fill="#f87171">❌ 指数级复杂</text>
+  </g>
+  <g id="after">
+    <text x="750" y="80" font-size="16" text-anchor="middle" fill="#94a3b8" font-weight="bold">现在：办公室中心</text>
+    <rect x="600" y="130" width="300" height="140" fill="#1e293b" stroke="#06b6d4" stroke-width="2" rx="8"/>
+    <text x="750" y="160" font-size="16" text-anchor="middle" fill="#06b6d4" font-weight="bold">Luna (HQ)</text>
+    <text x="750" y="185" font-size="12" text-anchor="middle" fill="#bfdbfe">中央协调、持久记忆</text>
+    <text x="750" y="240" font-size="12" text-anchor="middle" fill="#bfdbfe">任务分派 → 办公室执行</text>
+    <text x="750" y="300" font-size="12" text-anchor="middle" fill="#cbd5e1">Stella / 其他 Agent</text>
+    <text x="750" y="320" font-size="12" text-anchor="middle" fill="#22c55e">✓ 线性扩展 / 无状态</text>
+  </g>
+  <path d="M 450 200 L 600 200" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrow-cyan)"/>
+  <g id="offices">
+    <rect x="650" y="350" width="80" height="60" fill="#1e40af" stroke="#3b82f6" stroke-width="1" rx="4"/>
+    <text x="690" y="385" font-size="10" text-anchor="middle" fill="#60a5fa">设施 1</text>
+    <rect x="770" y="350" width="80" height="60" fill="#0c2340" stroke="#3b82f6" stroke-width="1" rx="4"/>
+    <text x="810" y="385" font-size="10" text-anchor="middle" fill="#60a5fa">设施 2</text>
+    <rect x="890" y="350" width="80" height="60" fill="#0c2340" stroke="#3b82f6" stroke-width="1" rx="4"/>
+    <text x="930" y="385" font-size="10" text-anchor="middle" fill="#60a5fa">设施 3</text>
+  </g>
+  <defs>
+    <marker id="arrow-cyan" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#06b6d4"/>
+    </marker>
+  </defs>
+</svg>

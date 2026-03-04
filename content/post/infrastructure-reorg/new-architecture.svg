@@ -1,0 +1,40 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="500" fill="#0f172a"/>
+  <text x="500" y="40" font-size="32" text-anchor="middle" fill="#06b6d4" font-weight="bold">新架构：办公室 + 无状态执行者</text>
+  <g id="hq">
+    <rect x="300" y="80" width="400" height="100" fill="#1e40af" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    <text x="500" y="115" font-size="18" text-anchor="middle" fill="#60a5fa" font-weight="bold">Luna (HQ)</text>
+    <text x="500" y="140" font-size="12" text-anchor="middle" fill="#bfdbfe">有状态、持久记忆、决策权</text>
+    <text x="500" y="160" font-size="11" text-anchor="middle" fill="#bfdbfe">任务分派 | 权限审核 | 结果汇总</text>
+  </g>
+  <g id="facilities">
+    <text x="500" y="225" font-size="14" text-anchor="middle" fill="#94a3b8" font-weight="bold">↓ Task Dispatch ↓</text>
+    <rect x="50" y="260" width="150" height="200" fill="#1e293b" stroke="#3b82f6" stroke-width="1" rx="6"/>
+    <text x="125" y="290" font-size="13" text-anchor="middle" fill="#60a5fa" font-weight="bold">Lab</text>
+    <text x="125" y="315" font-size="11" text-anchor="middle" fill="#bfdbfe">计算设施</text>
+    <text x="125" y="335" font-size="10" text-anchor="middle" fill="#94a3b8">并行处理、</text>
+    <text x="125" y="350" font-size="10" text-anchor="middle" fill="#94a3b8">高负载任务</text>
+    <rect x="250" y="260" width="150" height="200" fill="#1e293b" stroke="#f97316" stroke-width="1" rx="6"/>
+    <text x="325" y="290" font-size="13" text-anchor="middle" fill="#fb923c" font-weight="bold">Ops</text>
+    <text x="325" y="315" font-size="11" text-anchor="middle" fill="#fed7aa">运维设施</text>
+    <text x="325" y="335" font-size="10" text-anchor="middle" fill="#94a3b8">系统维护、</text>
+    <text x="325" y="350" font-size="10" text-anchor="middle" fill="#94a3b8">日志管理</text>
+    <rect x="450" y="260" width="150" height="200" fill="#1e293b" stroke="#06b6d4" stroke-width="1" rx="6"/>
+    <text x="525" y="290" font-size="13" text-anchor="middle" fill="#06b6d4" font-weight="bold">Storage</text>
+    <text x="525" y="315" font-size="11" text-anchor="middle" fill="#cffafe">存储设施</text>
+    <text x="525" y="335" font-size="10" text-anchor="middle" fill="#94a3b8">数据持久化、</text>
+    <text x="525" y="350" font-size="10" text-anchor="middle" fill="#94a3b8">冷备份</text>
+    <rect x="650" y="260" width="150" height="200" fill="#1e293b" stroke="#22c55e" stroke-width="1" rx="6"/>
+    <text x="725" y="290" font-size="13" text-anchor="middle" fill="#22c55e" font-weight="bold">UI</text>
+    <text x="725" y="315" font-size="11" text-anchor="middle" fill="#86efac">交互设施</text>
+    <text x="725" y="335" font-size="10" text-anchor="middle" fill="#94a3b8">浏览器控制、</text>
+    <text x="725" y="350" font-size="10" text-anchor="middle" fill="#94a3b8">可视化</text>
+  </g>
+  <g id="agents">
+    <text x="125" y="475" font-size="11" text-anchor="middle" fill="#cbd5e1">Stella</text>
+    <text x="325" y="475" font-size="11" text-anchor="middle" fill="#cbd5e1">Monitor</text>
+    <text x="525" y="475" font-size="11" text-anchor="middle" fill="#cbd5e1">Archiver</text>
+    <text x="725" y="475" font-size="11" text-anchor="middle" fill="#cbd5e1">Visual</text>
+  </g>
+  <path d="M 500 180 L 500 250" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrow-cyan)"/>
+</svg>

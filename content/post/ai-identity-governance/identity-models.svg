@@ -1,0 +1,18 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="500" fill="#0f172a"/>
+  <text x="500" y="40" font-size="32" text-anchor="middle" fill="#a855f7" font-weight="bold">身份定义模型对比</text>
+  <rect x="50" y="100" width="400" height="280" fill="#1e293b" stroke="#ef4444" stroke-width="2" rx="8"/>
+  <text x="250" y="135" font-size="18" text-anchor="middle" fill="#ef4444" font-weight="bold">旧模型</text>
+  <text x="250" y="165" font-size="14" text-anchor="middle" fill="#cbd5e1">身份 = 名字 + 人格</text>
+  <text x="250" y="190" font-size="12" text-anchor="middle" fill="#94a3b8">需要独立系统</text>
+  <text x="250" y="215" font-size="12" text-anchor="middle" fill="#94a3b8">指数级复杂度</text>
+  <text x="250" y="240" font-size="12" text-anchor="middle" fill="#94a3b8">难以扩展</text>
+  <text x="250" y="280" font-size="24" text-anchor="middle" fill="#ef4444">❌</text>
+  <rect x="550" y="100" width="400" height="280" fill="#1e293b" stroke="#22c55e" stroke-width="2" rx="8"/>
+  <text x="750" y="135" font-size="18" text-anchor="middle" fill="#22c55e" font-weight="bold">新模型</text>
+  <text x="750" y="165" font-size="14" text-anchor="middle" fill="#cbd5e1">身份 = 能力 + 约束 + 承诺</text>
+  <text x="750" y="190" font-size="12" text-anchor="middle" fill="#94a3b8">配置化表达</text>
+  <text x="750" y="215" font-size="12" text-anchor="middle" fill="#94a3b8">线性增长</text>
+  <text x="750" y="240" font-size="12" text-anchor="middle" fill="#94a3b8">易于扩展</text>
+  <text x="750" y="280" font-size="24" text-anchor="middle" fill="#22c55e">✅</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="500" fill="#0f172a"/>
+  <text x="500" y="40" font-size="32" text-anchor="middle" fill="#c084fc" font-weight="bold">模型配置冲突</text>
+  <g id="luna">
+    <circle cx="200" cy="250" r="70" fill="#3b82f6" opacity="0.2" stroke="#60a5fa" stroke-width="2"/>
+    <text x="200" y="245" font-size="28" text-anchor="middle" fill="#60a5fa" font-weight="bold">Luna</text>
+    <text x="200" y="270" font-size="14" text-anchor="middle" fill="#bfdbfe">需要快速</text>
+    <rect x="100" y="350" width="200" height="60" fill="#1e40af" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="200" y="375" font-size="16" text-anchor="middle" fill="#60a5fa" font-weight="bold">Sonnet</text>
+    <text x="200" y="400" font-size="12" text-anchor="middle" fill="#bfdbfe">4-5 秒</text>
+  </g>
+  <g id="stella">
+    <circle cx="800" cy="250" r="70" fill="#a855f7" opacity="0.2" stroke="#c084fc" stroke-width="2"/>
+    <text x="800" y="245" font-size="28" text-anchor="middle" fill="#c084fc" font-weight="bold">Stella</text>
+    <text x="800" y="270" font-size="14" text-anchor="middle" fill="#e9d5ff">需要深度</text>
+    <rect x="700" y="350" width="200" height="60" fill="#581c87" stroke="#a855f7" stroke-width="2" rx="4"/>
+    <text x="800" y="375" font-size="16" text-anchor="middle" fill="#c084fc" font-weight="bold">Opus</text>
+    <text x="800" y="400" font-size="12" text-anchor="middle" fill="#e9d5ff">20-30 秒</text>
+  </g>
+  <g id="conflict">
+    <rect x="350" y="200" width="300" height="100" fill="#1e293b" stroke="#ef4444" stroke-width="2" rx="8"/>
+    <text x="500" y="230" font-size="18" text-anchor="middle" fill="#ef4444" font-weight="bold">⚠️ 共享系统</text>
+    <text x="500" y="255" font-size="13" text-anchor="middle" fill="#cbd5e1">谁改配置，谁就破坏对方</text>
+    <text x="500" y="280" font-size="13" text-anchor="middle" fill="#f87171">模型选择 = 系统级决定</text>
+  </g>
+  <path d="M 270 280 L 350 250" stroke="#f87171" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <path d="M 730 280 L 650 250" stroke="#f87171" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <defs>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#f87171"/>
+    </marker>
+  </defs>
+</svg>

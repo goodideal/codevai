@@ -1,0 +1,54 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="600" fill="#0f172a"/>
+  <text x="500" y="40" font-size="32" text-anchor="middle" fill="#06b6d4" font-weight="bold">全球数据源地图</text>
+  <g id="us-stack">
+    <rect x="50" y="100" width="150" height="350" fill="#1e293b" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    <text x="125" y="130" font-size="14" text-anchor="middle" fill="#60a5fa" font-weight="bold">美股/期货</text>
+    <rect x="60" y="150" width="130" height="50" fill="#1e40af" stroke="#3b82f6" stroke-width="1"/>
+    <text x="125" y="180" font-size="12" text-anchor="middle" fill="#bfdbfe">yfinance</text>
+    <rect x="60" y="210" width="130" height="50" fill="#0c2340" stroke="#3b82f6" stroke-width="1"/>
+    <text x="125" y="240" font-size="12" text-anchor="middle" fill="#60a5fa">AkShare</text>
+    <rect x="60" y="270" width="130" height="50" fill="#0c2340" stroke="#3b82f6" stroke-width="1"/>
+    <text x="125" y="300" font-size="12" text-anchor="middle" fill="#60a5fa">Cache</text>
+    <text x="125" y="380" font-size="11" text-anchor="middle" fill="#94a3b8">&lt;3s P99</text>
+  </g>
+  <g id="cn-stack">
+    <rect x="250" y="100" width="150" height="350" fill="#1e293b" stroke="#f97316" stroke-width="2" rx="8"/>
+    <text x="325" y="130" font-size="14" text-anchor="middle" fill="#fb923c" font-weight="bold">A股/港股</text>
+    <rect x="260" y="150" width="130" height="50" fill="#7c2d12" stroke="#f97316" stroke-width="1"/>
+    <text x="325" y="180" font-size="12" text-anchor="middle" fill="#fed7aa">EastMoney</text>
+    <rect x="260" y="210" width="130" height="50" fill="#5a1e08" stroke="#f97316" stroke-width="1"/>
+    <text x="325" y="240" font-size="12" text-anchor="middle" fill="#fb923c">Sina</text>
+    <rect x="260" y="270" width="130" height="50" fill="#5a1e08" stroke="#f97316" stroke-width="1"/>
+    <text x="325" y="300" font-size="12" text-anchor="middle" fill="#fb923c">QT Protocol</text>
+    <text x="325" y="380" font-size="11" text-anchor="middle" fill="#94a3b8">&lt;2s P99</text>
+  </g>
+  <g id="crypto-stack">
+    <rect x="450" y="100" width="150" height="350" fill="#1e293b" stroke="#a855f7" stroke-width="2" rx="8"/>
+    <text x="525" y="130" font-size="14" text-anchor="middle" fill="#c084fc" font-weight="bold">加密资产</text>
+    <rect x="460" y="150" width="130" height="50" fill="#581c87" stroke="#a855f7" stroke-width="1"/>
+    <text x="525" y="180" font-size="12" text-anchor="middle" fill="#d8b4fe">yfinance</text>
+    <rect x="460" y="210" width="130" height="50" fill="#3f0f63" stroke="#a855f7" stroke-width="1"/>
+    <text x="525" y="240" font-size="12" text-anchor="middle" fill="#a855f7">Binance</text>
+    <rect x="460" y="270" width="130" height="50" fill="#3f0f63" stroke="#a855f7" stroke-width="1"/>
+    <text x="525" y="300" font-size="12" text-anchor="middle" fill="#a855f7">Cache</text>
+    <text x="525" y="380" font-size="11" text-anchor="middle" fill="#94a3b8">&lt;2s P99</text>
+  </g>
+  <g id="fx-stack">
+    <rect x="650" y="100" width="150" height="350" fill="#1e293b" stroke="#22c55e" stroke-width="2" rx="8"/>
+    <text x="725" y="130" font-size="14" text-anchor="middle" fill="#4ade80" font-weight="bold">外汇</text>
+    <rect x="660" y="150" width="130" height="50" fill="#15803d" stroke="#22c55e" stroke-width="1"/>
+    <text x="725" y="180" font-size="12" text-anchor="middle" fill="#86efac">yfinance</text>
+    <rect x="660" y="210" width="130" height="50" fill="#0d4d23" stroke="#22c55e" stroke-width="1"/>
+    <text x="725" y="240" font-size="12" text-anchor="middle" fill="#22c55e">Sina</text>
+    <rect x="660" y="270" width="130" height="50" fill="#0d4d23" stroke="#22c55e" stroke-width="1"/>
+    <text x="725" y="300" font-size="12" text-anchor="middle" fill="#22c55e">Cache</text>
+    <text x="725" y="380" font-size="11" text-anchor="middle" fill="#94a3b8">&lt;3s P99</text>
+  </g>
+  <g id="legend">
+    <rect x="50" y="480" width="750" height="100" fill="#1e293b" stroke="#475569" stroke-width="1" rx="4"/>
+    <text x="70" y="505" font-size="13" fill="#cbd5e1" font-weight="bold">设计原则：</text>
+    <text x="70" y="530" font-size="12" fill="#94a3b8">多源冗余 &gt; 单源优化 | 缓存为容错 &gt; 速度优化 | 优雅降级 &gt; 完美不可用</text>
+    <text x="70" y="555" font-size="12" fill="#94a3b8">任何一个源故障，系统自动回退。用户永远有数据。</text>
+  </g>
+</svg>

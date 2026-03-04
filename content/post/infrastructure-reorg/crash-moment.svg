@@ -1,0 +1,23 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="500" fill="#0f172a"/>
+  <defs>
+    <filter id="shake">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+  </defs>
+  <text x="500" y="40" font-size="32" text-anchor="middle" fill="#dc2626" font-weight="bold">系统级碰撞</text>
+  <circle cx="200" cy="250" r="80" fill="#dc2626" opacity="0.1" stroke="#dc2626" stroke-width="3" filter="url(#shake)"/>
+  <text x="200" y="245" font-size="32" text-anchor="middle" fill="#dc2626" font-weight="bold">Luna</text>
+  <text x="200" y="280" font-size="14" text-anchor="middle" fill="#fca5a5">无响应</text>
+  <circle cx="800" cy="250" r="80" fill="#dc2626" opacity="0.1" stroke="#dc2626" stroke-width="3" filter="url(#shake)"/>
+  <text x="800" y="245" font-size="32" text-anchor="middle" fill="#dc2626" font-weight="bold">Stella</text>
+  <text x="800" y="280" font-size="14" text-anchor="middle" fill="#fca5a5">无响应</text>
+  <rect x="250" y="120" width="500" height="80" fill="#1e293b" stroke="#dc2626" stroke-width="2" rx="8"/>
+  <text x="500" y="150" font-size="16" text-anchor="middle" fill="#fca5a5" font-weight="bold">Gateway Port 冲突</text>
+  <text x="500" y="175" font-size="13" text-anchor="middle" fill="#fca5a5">Tailscale 认证失败</text>
+  <text x="500" y="195" font-size="13" text-anchor="middle" fill="#fca5a5">双方陷入无限重连循环</text>
+  <rect x="150" y="360" width="700" height="80" fill="#1e293b" stroke="#ef4444" stroke-width="2" rx="8"/>
+  <text x="500" y="390" font-size="16" text-anchor="middle" fill="#ef4444" font-weight="bold">🔴 系统瘫痪</text>
+  <text x="500" y="415" font-size="13" text-anchor="middle" fill="#fca5a5">两个 AI 同时宕机</text>
+  <text x="500" y="430" font-size="13" text-anchor="middle" fill="#fca5a5">自动化工具无能为力</text>
+</svg>

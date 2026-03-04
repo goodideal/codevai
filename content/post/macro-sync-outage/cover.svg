@@ -1,0 +1,68 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <rect width="1200" height="630" fill="url(#grad1)"/>
+  
+  <!-- 左侧：正常数据流 -->
+  <g id="normal-flow">
+    <text x="200" y="80" font-size="18" fill="#4ade80" font-weight="bold">15:30 UTC ✓</text>
+    <rect x="50" y="120" width="300" height="60" fill="#15803d" stroke="#4ade80" stroke-width="2" rx="8"/>
+    <text x="200" y="155" font-size="14" text-anchor="middle" fill="#86efac">数据采集正常</text>
+    <path d="M 200 180 L 200 220" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow-green)"/>
+    <rect x="50" y="220" width="300" height="60" fill="#15803d" stroke="#4ade80" stroke-width="2" rx="8"/>
+    <text x="200" y="255" font-size="14" text-anchor="middle" fill="#86efac">Supabase 同步</text>
+    <path d="M 200 280 L 200 320" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow-green)"/>
+    <circle cx="200" cy="370" r="30" fill="#15803d" stroke="#4ade80" stroke-width="2"/>
+    <text x="200" y="375" font-size="24" text-anchor="middle" fill="#4ade80">✓</text>
+  </g>
+  
+  <!-- 中间：故障点 -->
+  <g id="failure-point">
+    <text x="600" y="80" font-size="18" fill="#ef4444" font-weight="bold">16:01 UTC ❌</text>
+    <rect x="450" y="120" width="300" height="60" fill="#7c2d12" stroke="#ef4444" stroke-width="3" rx="8"/>
+    <text x="600" y="155" font-size="14" text-anchor="middle" fill="#fca5a5">1008 Error</text>
+    <path d="M 600 180 L 600 220" stroke="#ef4444" stroke-width="3" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>
+    <rect x="450" y="220" width="300" height="60" fill="#7c2d12" stroke="#ef4444" stroke-width="3" rx="8"/>
+    <text x="600" y="255" font-size="14" text-anchor="middle" fill="#fca5a5">Gateway 堵塞</text>
+    <path d="M 600 280 L 600 320" stroke="#ef4444" stroke-width="3" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>
+    <circle cx="600" cy="370" r="30" fill="#7c2d12" stroke="#ef4444" stroke-width="3"/>
+    <text x="600" y="375" font-size="24" text-anchor="middle" fill="#ef4444">✗</text>
+  </g>
+  
+  <!-- 右侧：恢复方案 -->
+  <g id="recovery">
+    <text x="1000" y="80" font-size="18" fill="#06b6d4" font-weight="bold">16:30+ UTC ✓</text>
+    <rect x="850" y="120" width="300" height="60" fill="#0c4a6e" stroke="#06b6d4" stroke-width="2" rx="8"/>
+    <text x="1000" y="155" font-size="14" text-anchor="middle" fill="#cffafe">本地 bwg 执行</text>
+    <path d="M 1000 180 L 1000 220" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrow-cyan)"/>
+    <rect x="850" y="220" width="300" height="60" fill="#0c4a6e" stroke="#06b6d4" stroke-width="2" rx="8"/>
+    <text x="1000" y="255" font-size="14" text-anchor="middle" fill="#cffafe">Cron 定期同步</text>
+    <path d="M 1000 280 L 1000 320" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrow-cyan)"/>
+    <circle cx="1000" cy="370" r="30" fill="#0c4a6e" stroke="#06b6d4" stroke-width="2"/>
+    <text x="1000" y="375" font-size="24" text-anchor="middle" fill="#06b6d4">✓</text>
+  </g>
+
+  <!-- 下方：关键洞察 -->
+  <rect x="100" y="450" width="1000" height="130" fill="#1e293b" stroke="#475569" stroke-width="1" rx="8"/>
+  <text x="600" y="485" font-size="16" text-anchor="middle" fill="#cbd5e1" font-weight="bold">故障 → 诊断 → 转移：分布式的真实成本</text>
+  <text x="600" y="515" font-size="13" text-anchor="middle" fill="#94a3b8">关键路径失败时，往往不是修复节点，而是改变架构</text>
+  <text x="600" y="540" font-size="13" text-anchor="middle" fill="#94a3b8">从"多节点执行"到"本地备用"：可靠性的真相</text>
+  <text x="600" y="565" font-size="12" text-anchor="middle" fill="#64748b">29 分钟宕机 → 15 分钟手工修复 → 永久性架构调整</text>
+
+  <defs>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#4ade80"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ef4444"/>
+    </marker>
+    <marker id="arrow-cyan" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#06b6d4"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="conflict-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <rect width="1200" height="630" fill="url(#conflict-grad)"/>
+
+  <!-- 上方：时间轴 -->
+  <line x1="50" y1="80" x2="1150" y2="80" stroke="#475569" stroke-width="2"/>
+  
+  <g id="phase-1">
+    <circle cx="200" cy="80" r="8" fill="#f97316"/>
+    <text x="200" y="120" font-size="12" text-anchor="middle" fill="#cbd5e1" font-weight="bold">8:00</text>
+    <text x="200" y="140" font-size="11" text-anchor="middle" fill="#94a3b8">冲突</text>
+  </g>
+
+  <g id="phase-2">
+    <circle cx="450" cy="80" r="8" fill="#ea580c"/>
+    <text x="450" y="120" font-size="12" text-anchor="middle" fill="#cbd5e1" font-weight="bold">10:00</text>
+    <text x="450" y="140" font-size="11" text-anchor="middle" fill="#94a3b8">尝试</text>
+  </g>
+
+  <g id="phase-3">
+    <circle cx="700" cy="80" r="8" fill="#dc2626"/>
+    <text x="700" y="120" font-size="12" text-anchor="middle" fill="#cbd5e1" font-weight="bold">12:30</text>
+    <text x="700" y="140" font-size="11" text-anchor="middle" fill="#94a3b8">崩溃</text>
+  </g>
+
+  <g id="phase-4">
+    <circle cx="950" cy="80" r="8" fill="#22c55e"/>
+    <text x="950" y="120" font-size="12" text-anchor="middle" fill="#cbd5e1" font-weight="bold">18:00</text>
+    <text x="950" y="140" font-size="11" text-anchor="middle" fill="#94a3b8">重组</text>
+  </g>
+
+  <!-- 中间：冲突展示 -->
+  <g id="problem-visualization">
+    <!-- Luna -->
+    <rect x="100" y="220" width="200" height="140" fill="#1e40af" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    <text x="200" y="250" font-size="16" text-anchor="middle" fill="#60a5fa" font-weight="bold">Luna</text>
+    <text x="200" y="280" font-size="12" text-anchor="middle" fill="#bfdbfe">Sonnet</text>
+    <text x="200" y="300" font-size="11" text-anchor="middle" fill="#bfdbfe">快速响应</text>
+    <text x="200" y="340" font-size="12" text-anchor="middle" fill="#ef4444" font-weight="bold">😤</text>
+
+    <!-- 中间：冲突箭头 -->
+    <path d="M 300 290 L 400 290" stroke="#ef4444" stroke-width="3" marker-end="url(#arrow-red)"/>
+    <path d="M 400 290 L 500 290" stroke="#ef4444" stroke-width="3" marker-start="url(#arrow-red)"/>
+    <text x="400" y="280" font-size="11" text-anchor="middle" fill="#ef4444" font-weight="bold">PORT CONFLICT</text>
+
+    <!-- Stella -->
+    <rect x="900" y="220" width="200" height="140" fill="#581c87" stroke="#a855f7" stroke-width="2" rx="8"/>
+    <text x="1000" y="250" font-size="16" text-anchor="middle" fill="#c084fc" font-weight="bold">Stella</text>
+    <text x="1000" y="280" font-size="12" text-anchor="middle" fill="#e9d5ff">Opus</text>
+    <text x="1000" y="300" font-size="11" text-anchor="middle" fill="#e9d5ff">深度思考</text>
+    <text x="1000" y="340" font-size="12" text-anchor="middle" fill="#ef4444" font-weight="bold">😤</text>
+  </g>
+
+  <!-- 下方：解决方案 -->
+  <g id="solution">
+    <rect x="100" y="420" width="1000" height="170" fill="#1e293b" stroke="#22c55e" stroke-width="2" rx="8"/>
+    <text x="600" y="455" font-size="16" text-anchor="middle" fill="#22c55e" font-weight="bold">✓ 从"人格化 Agent"到"角色化执行"</text>
+    
+    <!-- Before -->
+    <rect x="120" y="475" width="420" height="100" fill="#0c2340" stroke="#475569" stroke-width="1" rx="4"/>
+    <text x="330" y="505" font-size="13" text-anchor="middle" fill="#cbd5e1" font-weight="bold">❌ 之前</text>
+    <text x="330" y="530" font-size="11" text-anchor="middle" fill="#94a3b8">两个独立系统</text>
+    <text x="330" y="550" font-size="11" text-anchor="middle" fill="#94a3b8">指数级复杂</text>
+
+    <!-- After -->
+    <rect x="660" y="475" width="420" height="100" fill="#15803d" stroke="#475569" stroke-width="1" rx="4"/>
+    <text x="870" y="505" font-size="13" text-anchor="middle" fill="#cbd5e1" font-weight="bold">✓ 现在</text>
+    <text x="870" y="530" font-size="11" text-anchor="middle" fill="#86efac">Luna 中枢 + 无状态执行</text>
+    <text x="870" y="550" font-size="11" text-anchor="middle" fill="#86efac">线性扩展</text>
+  </g>
+
+  <defs>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ef4444"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,78 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  
+  <!-- 标题 -->
+  <text x="600" y="50" font-size="24" text-anchor="middle" fill="#cbd5e1" font-weight="bold">三层安全漏洞 + 修复</text>
+
+  <!-- HIGH 漏洞 1：环境变量泄露 -->
+  <g id="vulnerability-1">
+    <rect x="50" y="100" width="350" height="480" fill="#1e293b" stroke="#dc2626" stroke-width="3" rx="8"/>
+    <text x="225" y="135" font-size="13" text-anchor="middle" fill="#dc2626" font-weight="bold">🔴 HIGH</text>
+    <text x="225" y="160" font-size="12" text-anchor="middle" fill="#fca5a5" font-weight="bold">环境变量泄露</text>
+    
+    <!-- 问题代码 -->
+    <rect x="70" y="190" width="310" height="90" fill="#3f0f1f" stroke="#dc2626" stroke-width="1" rx="4" font-family="monospace"/>
+    <text x="85" y="210" font-size="10" fill="#fca5a5" font-family="monospace">const API_KEY = process.env</text>
+    <text x="85" y="230" font-size="10" fill="#fca5a5" font-family="monospace">console.log(`Key: ${API_KEY}`)</text>
+    <text x="85" y="250" font-size="10" fill="#fca5a5" font-family="monospace">// ❌ 密钥暴露在日志</text>
+    <text x="85" y="270" font-size="9" fill="#94a3b8" font-family="monospace">⚠️ 备份、日志聚合</text>
+
+    <!-- 修复 -->
+    <rect x="70" y="310" width="310" height="140" fill="#1e1b4b" stroke="#f59e0b" stroke-width="1" rx="4"/>
+    <text x="225" y="335" font-size="11" text-anchor="middle" fill="#fbbf24" font-weight="bold">✓ 修复</text>
+    <text x="85" y="360" font-size="10" fill="#fde047" font-family="monospace">1. 删除 console.log</text>
+    <text x="85" y="380" font-size="10" fill="#fde047" font-family="monospace">2. 使用凭证管理系统</text>
+    <text x="85" y="400" font-size="10" fill="#fde047" font-family="monospace">3. 清理备份数据</text>
+    <text x="85" y="420" font-size="10" fill="#fde047" font-family="monospace">4. 完全删除 skill</text>
+
+    <text x="225" y="475" font-size="11" text-anchor="middle" fill="#dc2626" font-weight="bold">影响：Linear API 泄露</text>
+  </g>
+
+  <!-- HIGH 漏洞 2：硬编码凭证 -->
+  <g id="vulnerability-2">
+    <rect x="425" y="100" width="350" height="480" fill="#1e293b" stroke="#dc2626" stroke-width="3" rx="8"/>
+    <text x="600" y="135" font-size="13" text-anchor="middle" fill="#dc2626" font-weight="bold">🔴 HIGH</text>
+    <text x="600" y="160" font-size="12" text-anchor="middle" fill="#fca5a5" font-weight="bold">硬编码凭证</text>
+    
+    <!-- 问题代码 -->
+    <rect x="445" y="190" width="310" height="90" fill="#3f0f1f" stroke="#dc2626" stroke-width="1" rx="4" font-family="monospace"/>
+    <text x="460" y="210" font-size="10" fill="#fca5a5" font-family="monospace">SUPABASE_KEY =</text>
+    <text x="460" y="230" font-size="10" fill="#fca5a5" font-family="monospace">"sb_[actual-key-here]"</text>
+    <text x="460" y="250" font-size="10" fill="#fca5a5" font-family="monospace">// ❌ Git 历史永存</text>
+    <text x="460" y="270" font-size="9" fill="#94a3b8" font-family="monospace">Forks、镜像、备份</text>
+
+    <!-- 修复 -->
+    <rect x="445" y="310" width="310" height="140" fill="#1e1b4b" stroke="#f59e0b" stroke-width="1" rx="4"/>
+    <text x="600" y="335" font-size="11" text-anchor="middle" fill="#fbbf24" font-weight="bold">✓ 修复</text>
+    <text x="460" y="360" font-size="10" fill="#fde047" font-family="monospace">1. 迁移到 secrets.json</text>
+    <text x="460" y="380" font-size="10" fill="#fde047" font-family="monospace">2. 加入 .gitignore</text>
+    <text x="460" y="400" font-size="10" fill="#fde047" font-family="monospace">3. 清理 Git 历史</text>
+    <text x="460" y="420" font-size="10" fill="#fde047" font-family="monospace">4. 轮换凭证</text>
+
+    <text x="600" y="475" font-size="11" text-anchor="middle" fill="#dc2626" font-weight="bold">影响：Supabase 数据库</text>
+  </g>
+
+  <!-- MEDIUM 漏洞 3：网络暴露 -->
+  <g id="vulnerability-3">
+    <rect x="800" y="100" width="350" height="480" fill="#1e293b" stroke="#ea580c" stroke-width="2" rx="8"/>
+    <text x="975" y="135" font-size="13" text-anchor="middle" fill="#ea580c" font-weight="bold">🟠 MEDIUM</text>
+    <text x="975" y="160" font-size="12" text-anchor="middle" fill="#fed7aa" font-weight="bold">网络暴露</text>
+    
+    <!-- 问题 -->
+    <rect x="820" y="190" width="310" height="90" fill="#3f1f0f" stroke="#ea580c" stroke-width="1" rx="4"/>
+    <text x="835" y="215" font-size="10" fill="#fed7aa">Gateway: 127.0.0.1:18789</text>
+    <text x="835" y="235" font-size="10" fill="#fed7aa">Tailscale VPN 网络</text>
+    <text x="835" y="255" font-size="10" fill="#fed7aa">❌ 无防火墙限制</text>
+    <text x="835" y="270" font-size="9" fill="#94a3b8">攻击者入网 → 握手</text>
+
+    <!-- 修复 -->
+    <rect x="820" y="310" width="310" height="140" fill="#1e1b0f" stroke="#f59e0b" stroke-width="1" rx="4"/>
+    <text x="975" y="335" font-size="11" text-anchor="middle" fill="#fbbf24" font-weight="bold">✓ 修复</text>
+    <text x="835" y="360" font-size="10" fill="#fde047">1. 防火墙规则限制</text>
+    <text x="835" y="380" font-size="10" fill="#fde047">2. Tailnet Lock 签名</text>
+    <text x="835" y="400" font-size="10" fill="#fde047">3. 监控异常连接</text>
+    <text x="835" y="420" font-size="10" fill="#fde047">4. 定期审计</text>
+
+    <text x="975" y="475" font-size="11" text-anchor="middle" fill="#ea580c" font-weight="bold">影响：Gateway 被绕过</text>
+  </g>
+</svg>

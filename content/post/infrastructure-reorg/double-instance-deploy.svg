@@ -1,0 +1,26 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="500" fill="#0f172a"/>
+  <text x="500" y="40" font-size="32" text-anchor="middle" fill="#f97316" font-weight="bold">双实例部署尝试</text>
+  <g id="instance-1">
+    <rect x="50" y="100" width="380" height="280" fill="#1e293b" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    <text x="240" y="135" font-size="18" text-anchor="middle" fill="#60a5fa" font-weight="bold">OpenClaw Instance #1</text>
+    <text x="240" y="165" font-size="12" text-anchor="middle" fill="#cbd5e1">Luna (Original)</text>
+    <rect x="80" y="190" width="320" height="50" fill="#0c2340" stroke="#3b82f6" stroke-width="1" rx="4"/>
+    <text x="240" y="220" font-size="13" text-anchor="middle" fill="#60a5fa">Gateway: 127.0.0.1:18789</text>
+    <rect x="80" y="260" width="320" height="50" fill="#0c2340" stroke="#3b82f6" stroke-width="1" rx="4"/>
+    <text x="240" y="290" font-size="13" text-anchor="middle" fill="#60a5fa">Tailscale: ts.net</text>
+    <text x="240" y="370" font-size="24" text-anchor="middle" fill="#22c55e">✓</text>
+  </g>
+  <g id="instance-2">
+    <rect x="520" y="100" width="380" height="280" fill="#1e293b" stroke="#a855f7" stroke-width="2" rx="8"/>
+    <text x="710" y="135" font-size="18" text-anchor="middle" fill="#c084fc" font-weight="bold">OpenClaw Instance #2</text>
+    <text x="710" y="165" font-size="12" text-anchor="middle" fill="#cbd5e1">Stella (New Deploy)</text>
+    <rect x="550" y="190" width="320" height="50" fill="#3f0f63" stroke="#a855f7" stroke-width="1" rx="4"/>
+    <text x="710" y="220" font-size="13" text-anchor="middle" fill="#c084fc">Gateway: 127.0.0.1:18789 ❌</text>
+    <rect x="550" y="260" width="320" height="50" fill="#3f0f63" stroke="#a855f7" stroke-width="1" rx="4"/>
+    <text x="710" y="290" font-size="13" text-anchor="middle" fill="#c084fc">Tailscale: ts.net ❌</text>
+    <text x="710" y="370" font-size="24" text-anchor="middle" fill="#ef4444">✗</text>
+  </g>
+  <path d="M 430 280 L 520 280" stroke="#ef4444" stroke-width="3" marker-end="url(#arrow-red)"/>
+  <text x="475" y="270" font-size="14" text-anchor="middle" fill="#ef4444" font-weight="bold">COLLISION</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="400" fill="#0f172a"/>
+  <line x1="100" y1="200" x2="900" y2="200" stroke="#475569" stroke-width="2"/>
+  <circle cx="100" cy="200" r="8" fill="#ef4444"/>
+  <text x="100" y="240" font-size="14" text-anchor="middle" fill="#cbd5e1">16:01 UTC</text>
+  <text x="100" y="260" font-size="12" text-anchor="middle" fill="#94a3b8">Alert</text>
+  <circle cx="400" cy="200" r="8" fill="#f97316"/>
+  <text x="400" y="240" font-size="14" text-anchor="middle" fill="#cbd5e1">16:15 UTC</text>
+  <text x="400" y="260" font-size="12" text-anchor="middle" fill="#94a3b8">Diagnosis</text>
+  <circle cx="700" cy="200" r="8" fill="#eab308"/>
+  <text x="700" y="240" font-size="14" text-anchor="middle" fill="#cbd5e1">16:30 UTC</text>
+  <text x="700" y="260" font-size="12" text-anchor="middle" fill="#94a3b8">Manual Fix</text>
+  <circle cx="900" cy="200" r="8" fill="#22c55e"/>
+  <text x="900" y="240" font-size="14" text-anchor="middle" fill="#cbd5e1">16:45 UTC</text>
+  <text x="900" y="260" font-size="12" text-anchor="middle" fill="#94a3b8">Recovery</text>
+</svg>

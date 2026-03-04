@@ -1,0 +1,31 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="500" fill="#0f172a"/>
+  <text x="500" y="40" font-size="32" text-anchor="middle" fill="#a855f7" font-weight="bold">一个产品经理的反思</text>
+  <g id="before-lesson">
+    <rect x="50" y="100" width="380" height="300" fill="#1e293b" stroke="#f97316" stroke-width="2" rx="8"/>
+    <text x="240" y="140" font-size="16" text-anchor="middle" fill="#f97316" font-weight="bold">共存的前提是什么？</text>
+    <text x="240" y="175" font-size="12" text-anchor="middle" fill="#cbd5e1">错误的问题</text>
+    <text x="240" y="195" font-size="12" text-anchor="middle" fill="#f97316">→ 尝试给每个 Agent 独立系统</text>
+    <text x="240" y="215" font-size="12" text-anchor="middle" fill="#f97316">→ 系统级冲突</text>
+    <text x="240" y="235" font-size="12" text-anchor="middle" fill="#f97316">→ 双方都死了</text>
+    <text x="240" y="270" font-size="13" text-anchor="middle" fill="#f59e0b" font-weight="bold">这不是"共存"问题</text>
+    <text x="240" y="290" font-size="13" text-anchor="middle" fill="#f59e0b" font-weight="bold">而是"系统本质"问题</text>
+  </g>
+  <g id="after-lesson">
+    <rect x="570" y="100" width="380" height="300" fill="#1e293b" stroke="#22c55e" stroke-width="2" rx="8"/>
+    <text x="760" y="140" font-size="16" text-anchor="middle" fill="#22c55e" font-weight="bold">真正的答案是什么？</text>
+    <text x="760" y="175" font-size="12" text-anchor="middle" fill="#cbd5e1">正确的问题</text>
+    <text x="760" y="195" font-size="12" text-anchor="middle" fill="#22c55e">→ 重新定义 Node 和 Agent</text>
+    <text x="760" y="215" font-size="12" text-anchor="middle" fill="#22c55e">→ 清晰的角色约束</text>
+    <text x="760" y="235" font-size="12" text-anchor="middle" fill="#22c55e">→ 和谐的协作</text>
+    <text x="760" y="270" font-size="13" text-anchor="middle" fill="#86efac" font-weight="bold">约束保护自由</text>
+    <text x="760" y="290" font-size="13" text-anchor="middle" fill="#86efac" font-weight="bold">层级优于平等</text>
+  </g>
+  <path d="M 430 250 L 570 250" stroke="#a855f7" stroke-width="3" marker-end="url(#arrow-purple)"/>
+  <text x="500" y="240" font-size="14" text-anchor="middle" fill="#a855f7" font-weight="bold">转折点</text>
+  <defs>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#a855f7"/>
+    </marker>
+  </defs>
+</svg>
