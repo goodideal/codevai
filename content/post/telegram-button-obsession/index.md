@@ -1,7 +1,8 @@
 ---
 title: "灵活是留给创造的，确定是留给操作的"
-date: 2026-03-02T15:00:00+08:00
+date: 2026-02-14T15:00:00+08:00
 draft: false
+slug: "telegram-button-obsession"
 image: cover.svg
 categories: ["技术"]
 tags: ["telegram", "ui", "interaction-design", "buttons"]
