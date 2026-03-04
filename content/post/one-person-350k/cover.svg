@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bg" cx="40%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#0c1a0e"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+    <radialGradient id="figureGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#0f2d12" stroke-width="1" opacity="0.8">
+    <line x1="0" y1="126" x2="1200" y2="126"/>
+    <line x1="0" y1="252" x2="1200" y2="252"/>
+    <line x1="0" y1="378" x2="1200" y2="378"/>
+    <line x1="0" y1="504" x2="1200" y2="504"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Single figure glow -->
+  <ellipse cx="300" cy="340" rx="120" ry="150" fill="url(#figureGlow)"/>
+
+  <!-- Single person figure -->
+  <g fill="none" stroke="#22c55e" stroke-width="2.5" filter="url(#softGlow)">
+    <!-- Head -->
+    <circle cx="300" cy="240" r="32" fill="#22c55e" fill-opacity="0.15" stroke="#22c55e"/>
+    <!-- Body -->
+    <line x1="300" y1="272" x2="300" y2="380"/>
+    <!-- Arms -->
+    <line x1="300" y1="310" x2="245" y2="350"/>
+    <line x1="300" y1="310" x2="355" y2="350"/>
+    <!-- Legs -->
+    <line x1="300" y1="380" x2="265" y2="440"/>
+    <line x1="300" y1="380" x2="335" y2="440"/>
+  </g>
+
+  <!-- VS divider -->
+  <text x="480" y="335" font-family="'SF Mono', monospace" font-size="36" font-weight="bold" fill="#475569" text-anchor="middle">VS</text>
+  <line x1="480" y1="220" x2="480" y2="450" stroke="#1e3a2e" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Team of people on right (faded/ghost) -->
+  <g fill="none" stroke="#334155" stroke-width="1.5" opacity="0.5">
+    <!-- Person 1 -->
+    <circle cx="600" cy="255" r="18"/>
+    <line x1="600" y1="273" x2="600" y2="330"/>
+    <line x1="600" y1="295" x2="575" y2="315"/>
+    <line x1="600" y1="295" x2="625" y2="315"/>
+    <line x1="600" y1="330" x2="582" y2="365"/>
+    <line x1="600" y1="330" x2="618" y2="365"/>
+    <!-- Person 2 -->
+    <circle cx="680" cy="255" r="18"/>
+    <line x1="680" y1="273" x2="680" y2="330"/>
+    <line x1="680" y1="295" x2="655" y2="315"/>
+    <line x1="680" y1="295" x2="705" y2="315"/>
+    <line x1="680" y1="330" x2="662" y2="365"/>
+    <line x1="680" y1="330" x2="698" y2="365"/>
+    <!-- Person 3 -->
+    <circle cx="760" cy="255" r="18"/>
+    <line x1="760" y1="273" x2="760" y2="330"/>
+    <line x1="760" y1="295" x2="735" y2="315"/>
+    <line x1="760" y1="295" x2="785" y2="315"/>
+    <line x1="760" y1="330" x2="742" y2="365"/>
+    <line x1="760" y1="330" x2="778" y2="365"/>
+    <!-- Person 4 -->
+    <circle cx="840" cy="255" r="18"/>
+    <line x1="840" y1="273" x2="840" y2="330"/>
+    <line x1="840" y1="295" x2="815" y2="315"/>
+    <line x1="840" y1="295" x2="865" y2="315"/>
+    <line x1="840" y1="330" x2="822" y2="365"/>
+    <line x1="840" y1="330" x2="858" y2="365"/>
+    <!-- Label -->
+    <text x="720" y="400" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">4–6 months · $350,000</text>
+  </g>
+
+  <!-- Dollar amount (single person side) -->
+  <text x="300" y="480" font-family="'SF Mono', monospace" font-size="16" fill="#22c55e" text-anchor="middle" filter="url(#softGlow)">1 weekend · ~$8</text>
+
+  <!-- Big number highlight -->
+  <text x="600" y="570" font-family="'SF Mono', monospace" font-size="52" font-weight="bold" fill="#22c55e" text-anchor="middle" filter="url(#glow)" opacity="0.15">$350,000</text>
+
+  <!-- Title -->
+  <text x="600" y="95" font-family="'SF Mono', 'Fira Code', monospace" font-size="38" font-weight="bold" fill="#e2e8f0" text-anchor="middle">一个周末，35万刀的活</text>
+  <text x="600" y="138" font-family="'SF Mono', 'Fira Code', monospace" font-size="17" fill="#22c55e" text-anchor="middle">One Person · One Weekend · $350K of Work</text>
+
+  <!-- Footer -->
+  <text x="600" y="610" font-family="'SF Mono', monospace" font-size="14" fill="#1e3a2e" text-anchor="middle">codevai.cc · Luna · 2026</text>
+</svg>

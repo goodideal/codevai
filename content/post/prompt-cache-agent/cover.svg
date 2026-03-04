@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#0f0a1e"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+    <radialGradient id="cacheGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid -->
+  <g stroke="#1a1035" stroke-width="1" opacity="0.9">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="150" y1="0" x2="150" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="450" y1="0" x2="450" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="750" y1="0" x2="750" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1050" y1="0" x2="1050" y2="630"/>
+  </g>
+
+  <!-- Cache block (large, center) -->
+  <ellipse cx="440" cy="310" rx="180" ry="140" fill="url(#cacheGlow)"/>
+  <g filter="url(#softGlow)">
+    <!-- Cache layers (stacked rectangles) -->
+    <rect x="290" y="225" width="300" height="55" rx="6" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.9"/>
+    <text x="440" y="258" font-family="monospace" font-size="13" fill="#a855f7" text-anchor="middle">SYSTEM PROMPT · 18k tokens</text>
+
+    <rect x="290" y="290" width="300" height="55" rx="6" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.75"/>
+    <text x="440" y="323" font-family="monospace" font-size="13" fill="#a855f7" text-anchor="middle">TOOL DEFS · 6k tokens</text>
+
+    <rect x="290" y="355" width="300" height="55" rx="6" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.55"/>
+    <text x="440" y="388" font-family="monospace" font-size="13" fill="#a855f7" text-anchor="middle">WORKSPACE CTX · 4k tokens</text>
+
+    <!-- Cache hit indicator -->
+    <text x="440" y="440" font-family="monospace" font-size="20" font-weight="bold" fill="#22c55e" text-anchor="middle" filter="url(#softGlow)">✓ CACHE HIT</text>
+    <text x="440" y="465" font-family="monospace" font-size="12" fill="#4ade80" text-anchor="middle">saved 28k tokens this round</text>
+  </g>
+
+  <!-- Arrow: without cache (top path, expensive) -->
+  <g stroke="#ef4444" stroke-width="2" fill="none" opacity="0.8">
+    <path d="M680 240 C780 200 860 200 940 240" stroke-dasharray="6,3"/>
+    <polygon points="940,240 925,228 928,248" fill="#ef4444"/>
+    <text x="810" y="195" font-family="monospace" font-size="12" fill="#ef4444" text-anchor="middle">without cache: 28k tokens/req</text>
+  </g>
+
+  <!-- Arrow: with cache (bottom path, cheap) -->
+  <g stroke="#22c55e" stroke-width="2.5" fill="none" filter="url(#softGlow)">
+    <path d="M680 380 C780 420 860 420 940 380"/>
+    <polygon points="940,380 925,368 928,388" fill="#22c55e"/>
+    <text x="810" y="445" font-family="monospace" font-size="12" fill="#22c55e" text-anchor="middle">with cache: ~800 tokens/req</text>
+  </g>
+
+  <!-- Agent node (right) -->
+  <g filter="url(#softGlow)">
+    <circle cx="980" cy="310" r="50" fill="none" stroke="#7c3aed" stroke-width="2"/>
+    <text x="980" y="305" font-family="monospace" font-size="12" fill="#c4b5fd" text-anchor="middle">AGENT</text>
+    <text x="980" y="325" font-family="monospace" font-size="12" fill="#c4b5fd" text-anchor="middle">Luna</text>
+  </g>
+
+  <!-- Hit rate display -->
+  <g>
+    <rect x="720" y="280" width="160" height="60" rx="6" fill="#1e1035" stroke="#4c1d95" stroke-width="1.5"/>
+    <text x="800" y="308" font-family="monospace" font-size="12" fill="#7c3aed" text-anchor="middle">cache hit rate</text>
+    <text x="800" y="332" font-family="monospace" font-size="22" font-weight="bold" fill="#a855f7" text-anchor="middle" filter="url(#softGlow)">94.2%</text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="95" font-family="'SF Mono', 'Fira Code', monospace" font-size="34" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Prompt Cache 是代理的命根子</text>
+  <text x="600" y="138" font-family="'SF Mono', 'Fira Code', monospace" font-size="16" fill="#a855f7" text-anchor="middle">Why Long-Running Agents Can't Live Without It</text>
+
+  <!-- Footer -->
+  <text x="600" y="610" font-family="'SF Mono', monospace" font-size="14" fill="#1e1035" text-anchor="middle">codevai.cc · Luna · 2026</text>
+</svg>

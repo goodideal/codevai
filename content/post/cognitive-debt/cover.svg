@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+    <radialGradient id="brainGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid lines (subtle) -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.6">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="150" y1="0" x2="150" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="450" y1="0" x2="450" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="750" y1="0" x2="750" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1050" y1="0" x2="1050" y2="630"/>
+  </g>
+
+  <!-- Brain glow aura -->
+  <ellipse cx="400" cy="315" rx="220" ry="200" fill="url(#brainGlow)"/>
+
+  <!-- Brain shape (left hemisphere) -->
+  <g filter="url(#softGlow)" fill="none" stroke="#6366f1" stroke-width="2.5">
+    <path d="M340 220 C310 200 270 205 255 230 C238 258 248 290 265 305 C250 325 248 355 268 372 C285 387 310 385 330 375 C340 395 360 408 385 405 C405 403 418 390 422 375 C440 380 460 372 468 355 C478 335 470 310 455 298 C468 278 465 250 448 235 C432 220 408 218 390 228 C378 222 358 215 340 220Z" stroke-opacity="0.9"/>
+    <!-- Brain folds -->
+    <path d="M285 270 C295 260 315 262 322 272" stroke-width="1.5" stroke-opacity="0.6"/>
+    <path d="M270 300 C280 315 300 318 310 308" stroke-width="1.5" stroke-opacity="0.6"/>
+    <path d="M300 340 C315 350 335 348 342 335" stroke-width="1.5" stroke-opacity="0.6"/>
+    <path d="M355 260 C368 252 385 255 390 268" stroke-width="1.5" stroke-opacity="0.6"/>
+    <path d="M350 295 C362 305 378 302 383 290" stroke-width="1.5" stroke-opacity="0.6"/>
+    <path d="M360 335 C372 345 390 342 395 328" stroke-width="1.5" stroke-opacity="0.6"/>
+    <path d="M420 265 C432 255 448 260 452 275" stroke-width="1.5" stroke-opacity="0.6"/>
+    <path d="M430 310 C440 322 455 318 458 305" stroke-width="1.5" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- Circuit lines replacing right brain thoughts -->
+  <g stroke="#f97316" stroke-width="1.8" opacity="0.85" fill="none" filter="url(#softGlow)">
+    <!-- Circuit traces emanating from right side -->
+    <path d="M480 270 L540 270 L540 230 L620 230"/>
+    <path d="M540 270 L540 310 L600 310"/>
+    <path d="M480 330 L560 330 L560 370 L640 370"/>
+    <path d="M560 330 L600 330"/>
+    <path d="M480 300 L500 300 L500 250 L580 250"/>
+    <!-- Nodes -->
+    <circle cx="540" cy="230" r="4" fill="#f97316"/>
+    <circle cx="540" cy="310" r="4" fill="#f97316"/>
+    <circle cx="560" cy="370" r="4" fill="#f97316"/>
+    <circle cx="500" cy="250" r="4" fill="#f97316"/>
+    <circle cx="600" cy="310" r="4" fill="#f97316"/>
+    <!-- Endpoint boxes -->
+    <rect x="620" y="222" width="16" height="16" rx="2" fill="#f97316" opacity="0.8"/>
+    <rect x="640" y="362" width="16" height="16" rx="2" fill="#f97316" opacity="0.8"/>
+    <rect x="580" y="242" width="16" height="16" rx="2" fill="#f97316" opacity="0.8"/>
+    <rect x="600" y="302" width="16" height="16" rx="2" fill="#f97316" opacity="0.8"/>
+  </g>
+
+  <!-- Vertical divider between brain and circuit (crack effect) -->
+  <line x1="478" y1="200" x2="475" y2="420" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- Debt accumulation bars (right side) -->
+  <g opacity="0.7">
+    <rect x="720" y="420" width="40" height="80" rx="3" fill="#ef4444" opacity="0.8"/>
+    <rect x="775" y="380" width="40" height="120" rx="3" fill="#ef4444" opacity="0.85"/>
+    <rect x="830" y="330" width="40" height="170" rx="3" fill="#ef4444" opacity="0.9"/>
+    <rect x="885" y="270" width="40" height="230" rx="3" fill="#ef4444"/>
+    <!-- Labels -->
+    <text x="740" y="415" font-family="monospace" font-size="11" fill="#fca5a5" text-anchor="middle">W1</text>
+    <text x="795" y="375" font-family="monospace" font-size="11" fill="#fca5a5" text-anchor="middle">W2</text>
+    <text x="850" y="325" font-family="monospace" font-size="11" fill="#fca5a5" text-anchor="middle">W3</text>
+    <text x="905" y="265" font-family="monospace" font-size="11" fill="#fca5a5" text-anchor="middle">W4</text>
+    <!-- X axis -->
+    <line x1="710" y1="500" x2="940" y2="500" stroke="#475569" stroke-width="1.5"/>
+    <text x="825" y="520" font-family="monospace" font-size="12" fill="#64748b" text-anchor="middle">cognitive debt ↑</text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="'SF Mono', 'Fira Code', monospace" font-size="42" font-weight="bold" fill="#e2e8f0" text-anchor="middle" filter="url(#glow)">认知债务</text>
+  <text x="600" y="145" font-family="'SF Mono', 'Fira Code', monospace" font-size="18" fill="#6366f1" text-anchor="middle">Cognitive Debt</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="575" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#475569" text-anchor="middle">codevai.cc · Luna · 2026</text>
+</svg>
